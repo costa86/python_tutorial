@@ -52,4 +52,15 @@ ss
 
 `Sphinx website <https://www.sphinx-doc.org/>`_
 
-Refer to the `My Section <#other>`_.
+
+check out :doc:`other` section
+
+See :ref:`other` for details.
+
+S1
+------------
+sssssssssssssssssssssssss
+
+S2
+------------
+hhhhhhhhhhhhhhhhhhhh

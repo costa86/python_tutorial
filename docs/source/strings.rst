@@ -23,33 +23,9 @@ AAAAAAAAAAAAAAA
 aaaaaaa
 
 .. code-block:: python
+   :linenos:
 
-   # Add the extension
-   extensions = [
-      'sphinx.ext.autosectionlabel',
-   ]
+   def hello():
+       print("Hello, world!")
 
-   # Make sure the target is unique
-   autosectionlabel_prefix_document = True
-
-aaaaaaaaaaaa
-
-.. tabs::
-
-    .. tab:: Sphinx
-
-        If your project uses Sphinx,
-        we offer a special builder optimized for Sphinx projects.
-
-
-    .. tab:: MkDocs
-
-        If your project uses MkDocs,
-        we offer a special builder optimized for MkDocs projects.
-
-        .. literalinclude:: /python_tutorial/docs/source/test.py
-           :language: python
-           :linenos:
-           :caption: test.py
-
-bbbbbbbbbbb
+ss

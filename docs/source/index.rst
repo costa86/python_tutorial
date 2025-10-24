@@ -22,4 +22,5 @@ Contents
    test
    api
    cool
+   strings
    

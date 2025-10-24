@@ -1,6 +1,4 @@
-HELLO
-
-===
+# HELLO
 
 .. autosummary::
    :toctree: generated

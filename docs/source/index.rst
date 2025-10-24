@@ -21,4 +21,5 @@ Contents
    usage
    test
    api
+   cool
    

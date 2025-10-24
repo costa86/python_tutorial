@@ -43,3 +43,13 @@ ss
    .. tab:: Oranges
 
       Oranges are orange.
+
+
+.. warning::
+   This is a warning message!
+
+**This text will be bold**
+
+`Sphinx website <https://www.sphinx-doc.org/>`_
+
+Refer to the `My Section <#other>`_.

@@ -26,4 +26,5 @@ Contents
    lists
    sample
    function
+   other
    

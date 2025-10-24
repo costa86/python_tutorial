@@ -24,4 +24,6 @@ Contents
    cool
    strings
    lists
+   sample
+   function
    

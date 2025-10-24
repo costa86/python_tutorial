@@ -1,6 +1,13 @@
 ============
 Strings
 ============
+
+.. image:: https://tenor.com/v5jy.gif
+   :alt: Description of the animation
+   :width: 400px
+   :align: center
+
+
 This is how you represent text in Python. Any of these syntaxes are valid strings:
 
 .. code-block:: python
@@ -19,7 +26,7 @@ This is how you represent text in Python. Any of these syntaxes are valid string
 
 .. note::
 
-   ``name_2`` and ``name_3`: these are ways of representing multi-line
+   ``name_2`` and ``name_3`` are ways of representing multi-line
 
 
 In more realistic scenarios, you are more likely to use strings composed by regular text plus other values obtained from variables. 

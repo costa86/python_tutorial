@@ -1,71 +1,52 @@
 ============
 Strings
 ============
-dewdwed
-dwedwe
-
-* dwedwe
-* dewdew
-
-For example:
-
-.. note::
-
-   This project is under active development.
-
-
-AAAAAAAAAAAAAAA
-
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-aaaaaaa
+This is how you represent text in Python. Any of these syntaxes are valid strings:
 
 .. code-block:: python
    :linenos:
 
-   def hello():
-       print("Hello, world!")
-
-ss
-
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
+   name_1 = "Stanley Hudson"
+   name_2 = """
+   Stanley
+   Hudson
+   """
+   name_3 = """
+   Stanley Hudson
+   """
+   name_4 = 'Stanley Hudson'
 
 
-.. warning::
-   This is a warning message!
+.. note::
 
-**This text will be bold**
-
-`Sphinx website <https://www.sphinx-doc.org/>`_
+   ``name_2`` and ``name_3`: these are ways of representing multi-line
 
 
-check out :doc:`other` section
+In more realistic scenarios, you are more likely to use strings composed by regular text plus other values obtained from variables. 
+Let's say you want a string to greet someone based on their name:
 
-See :ref:`other` for details.
+.. note::
 
-S1
-------------
-sssssssssssssssssssssssss
+   This process is also known as “string/variable interpolation/substitution”. 
 
-S2
-------------
-hhhhhhhhhhhhhhhhhhhh
+.. code-block:: python
+   :linenos:
 
-.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWV1MGdzOGc1MHIyZWt5eWRycXJma2ZiZDFxOWg5bnkzdWZqZXpmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUQ4rhUZJYiQsas6WD/giphy.gif
-   :alt: Description of the animation
-   :width: 400px
-   :align: center
+   name = "Angela"
+   animal = "cat"
+   greeting_1 = f"Welcome, {name}"
+   greeting_2 = "Welcome, " + name
+   greeting_3 = "Welcome, %s" % name
+   greeting_4 = "Welcome, {}. Are you a {} person ?".format(name, animal)
+
+   print(greeting_1)  # => "Welcome, Angela"
+   print(greeting_2)  # => "Welcome, Angela"
+   print(greeting_3)  # => "Welcome, Angela"
+   print(greeting_4)  # => "Welcome, Angela. Are you a cat person ?"
+
+Some explanation about these string variables:
+
+``greeting_1``
+
+This is the convention adopted throughout this book, since I ﬁnd it more convenient to use and readable. 
+Also, it's the most modern approach. Notice the “f” must be placed right before the beginning of the string.

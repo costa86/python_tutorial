@@ -142,6 +142,7 @@ which is a concept explained in the Absence of a value chapter.
       print("Hi")
 
    say_hi() #=> Hi
+   print(say_hi())  # => None
 
 
 .. note::

@@ -13,3 +13,17 @@ Both of them can be seen as the inputs. Then the machine processes them and give
    :scale: 100 %
    :alt: Function analogy
 
+Functions in Mathematics
+-------------------
+
+As a basic example:
+
+__________________________
+f(x) = x + 2 
+
+Where:
+
+f: the name of the function
+x: the input
+x + 2: the output
+___________________________

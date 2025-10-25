@@ -47,5 +47,6 @@ Contents
    strings
    numbers
    functions
+   lists
 
    

@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = "Lumache"
+project = "Python Straight to the Point"
 copyright = "2025, Lourenço Costa"
 author = "Lourenço Costa"
 

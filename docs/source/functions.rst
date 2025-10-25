@@ -10,6 +10,6 @@ Both of them can be seen as the inputs. Then the machine processes them and give
 
 
 .. figure:: function.png
-   :scale: 50 %
+   :scale: 100 %
    :alt: Function analogy
 

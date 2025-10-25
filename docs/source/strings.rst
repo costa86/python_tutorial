@@ -2,11 +2,6 @@
 Strings
 ============
 
-.. image:: https://tenor.com/v5jy.gif
-   :alt: Description of the animation
-   :width: 400px
-   :align: center
-
 
 This is how you represent text in Python. Any of these syntaxes are valid strings:
 
@@ -57,3 +52,17 @@ Some explanation about these string variables:
 
 This is the convention adopted throughout this book, since I ﬁnd it more convenient to use and readable. 
 Also, it's the most modern approach. Notice the “f” must be placed right before the beginning of the string.
+
+``greeting_2``
+ 
+Notice the “+” sign. When dealing with strings, it means concatenation (joining). If you use it with numbers, such as integers or ﬂoats, it means a mathematical sum. 
+This ability to perform different actions according to how it’s used is called polymorphism (poly=many, morph=form). 
+So, in Python, the “+” sign is polymorphic. You will see about numbers in the Numbers chapter.
+
+``greeting_3``
+
+The “%s” stands for “string”. If the name variable was an integer, for instance, then “%i” should be used instead of “%s”.
+
+``greeting_4``
+
+The format method was used here (you’ll learn more about this in the Classes chapter), and the contents inside the curly brackets “{}” were replaced by the `name` and `animal` variables, respectively.

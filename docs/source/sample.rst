@@ -1,5 +1,5 @@
 ============
-Strings
+Sample
 ============
 dewdwed
 dwedwe

@@ -48,5 +48,6 @@ Contents
    numbers
    functions
    lists
+   tuples
 
    

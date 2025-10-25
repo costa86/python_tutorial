@@ -65,4 +65,43 @@ The “%s” stands for “string”. If the name variable was an integer, for i
 
 ``greeting_4``
 
-The format method was used here (you’ll learn more about this in the Classes chapter), and the contents inside the curly brackets “{}” were replaced by the `name` and `animal` variables, respectively.
+The format method was used here (you’ll learn more about this in the Classes chapter), and the contents inside the curly brackets “{}” were replaced by the ``name`` and ``animal`` variables, respectively.
+
+
+Replicating strings
+------------
+
+An interesting use case for strings is being able to replicate it multiple times by using the ``*`` operator, the same one used for multiplying numbers.
+
+.. code-block:: python
+   :linenos:
+   branch = "Buffalo" 
+   many_times = branch * 3
+   print(many_times) # => "BuffaloBuffaloBuffalo"
+
+Escape sequences
+-----------------
+
+These are special characters that can be used in strings to provide some additional features. They are denoted by a backslash ``\``, followed by the character. 
+For instance:
+
+=======  ======  ======
+Header1  Header2 Header3
+=======  ======  ======
+A        B       C
+D        E       F
+=======  ======  ======
+
+.. list-table:: Example Table
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Name
+     - Age
+     - Occupation
+   * - Alice
+     - 30
+     - Developer
+   * - Bob
+     - 28
+     - Writer

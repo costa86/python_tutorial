@@ -145,13 +145,13 @@ Logical operators
      - Description
      - Example
    * - and
-     - Returns True if all operands are True
+     - Returns ``True`` if all operands are ``True``
      - ``True and False`` returns ``False``
    * - or
-     - Returns True if at least one operand is True
+     - Returns ``True`` if at least one operand is ``True``
      - ``True or False`` returns ``True``
    * - not
-     - Returns True if the operand is False
+     - Returns ``True`` if the operand is ``False``
      - ``not True`` returns ``False``
 
 More examples:

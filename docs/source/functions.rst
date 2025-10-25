@@ -9,7 +9,6 @@ As a real-world analogy, think of a function as a vending machine. In order to u
 Both of them can be seen as the inputs. Then the machine processes them and gives you the desired product, which can be seen as the output of the function.
 
 
-
 .. figure:: /_static/function.png
    :width: 80%
    :align: center

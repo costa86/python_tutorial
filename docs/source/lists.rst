@@ -13,14 +13,14 @@ This is one of the most typical ways in Python to store collections of values.
 
 .. note::
 
-    As seen in crazy_list, a list may hold values of diﬀerent types.
+    As seen in ``crazy_list``, a list may hold values of diﬀerent types.
 
 Accessing elements in a list
 -------------------------
 
 A crucial concept to grasp in order to work with lists is "indexes". Each element in a list is automatically assigned a number, starting at 0, according to their position.
 
-So in the ``winners`` list:
+So, in the ``winners`` list:
 
 +---------+-------+---------------+
 | Element | Index | Negative index|
@@ -89,11 +89,9 @@ Validation if a list has elements
 ------------------------------------
 
 This concept assumes you have read both Functions and Conditionals chapters.
-
 Consider the following situation: you have a function that receives a list. 
 If the list has elements, the function performs action "A", but if the list is empty, then it performs action "B".
-
-You may use the `len()` function to get the number of elements in a list.
+You may use the ``len()`` function to get the number of elements in a list.
 
 .. code-block:: python
    :linenos:
@@ -120,9 +118,9 @@ But in Python there's a convenient abstraction for checking whether a list has e
 
     def handle_list(some_list: list) -> None: 
         if some_list:
-    print("list has values") 
-    else:
-        print("list is empty")
+            print("list has values") 
+        else:
+            print("list is empty")
 
 
     handle_list(winners) # => list has values 
@@ -134,7 +132,6 @@ List comprehension
 ----------------
 
 This concept assumes you have read the Loops chapter.
-
 This is an interesting feature in Python that allows you to create lists using a more concise and readable syntax:
 
 .. code-block:: python
@@ -179,17 +176,18 @@ Also a list created with list comprehension. There's a third part now:
 
 - Deﬁnes what will be in the new list: ``i``
 - Deﬁnes the iteration over the original list: ``for i in winners``	
-- Deﬁnes a conditional for ``i`` to be added to the new list: ``if "a" in i`` (if the letter "a" is found in i)
+- Deﬁnes a conditional for ``i`` to be added to the new list: ``if "a" in i`` (if the letter "a" is found in ``i``)
 
 
 Some methods in lists
 --------------------------
 
-There are many built-in methods to extend the capabilities of a list. Visit: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists to see them all.  Next, a few of the most popular ones:
+There are many built-in methods to extend the capabilities of a list. Visit: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists to see them all.  
+Next, a few of the most popular ones:
 
 .. code-block:: python
    :linenos:
-   
+
     winners = ["dwight", "pam", "angela", "kevin", "phyllis", "toby", "oscar"]
 
     winners.pop(1) # The element at index 1 ("pam") was removed from the list

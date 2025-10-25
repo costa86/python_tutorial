@@ -1,7 +1,10 @@
-a = 3 + 5j
-b = 5j
-c = -5j
+def get_multiple_named_parameters(**kwargs):
+    return kwargs
 
-print(type(a), a)  # => <class 'complex'>
-print(type(b), b)  # => <class 'complex'>
-print(type(c))  # => <class 'complex'>
+
+a = get_multiple_named_parameters(name="Ryan", age=25)
+b = get_multiple_named_parameters(code=2, color="red", active=False)
+
+print(a)  # => {'name': 'Ryan', 'age': 25}
+print(b)  # => {'code': 2, 'color': 'red', 'active': False}
+print(type(a), type(b))  # => <class 'dict'> <class 'dict'>

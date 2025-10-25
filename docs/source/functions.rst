@@ -18,25 +18,15 @@ Functions in Mathematics
 
 As a basic example:
 
-.. container:: custom
-   
-   f(x) = x + 2 
 
-   Where:
+.. code-block:: rst
 
-   f: the name of the function
-   x: the input
-   x + 2: the output
+      f(x) = x + 2 
 
+      Where:
 
-compound
+      f: the name of the function
+      x: the input
+      x + 2: the output
 
-.. compound::
-   
-   f(x) = x + 2 
-
-   Where:
-
-   f: the name of the function
-   x: the input
-   x + 2: the output
+vvvvvvvvvvv

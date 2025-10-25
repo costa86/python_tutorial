@@ -51,4 +51,5 @@ Contents
    tuples
    dictionaries
    sets
-   boolean   
+   boolean
+   operators   

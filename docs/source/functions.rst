@@ -19,10 +19,12 @@ Both of them can be seen as the inputs. Then the machine processes them and give
    :align: center
 
 com
+
 .. figure:: /source/function.png
    :width: 80%
    :align: center
    :alt: GitHub template for the tutorial
+
 sem
 
 .. figure:: source/function.png

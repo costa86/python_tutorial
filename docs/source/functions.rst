@@ -11,13 +11,5 @@ Both of them can be seen as the inputs. Then the machine processes them and give
 
 .. figure:: function.png
    :scale: 50 %
-   :alt: map to buried treasure
+   :alt: Function analogy
 
-
-.. figure:: . function.png
-   :scale: 50 %
-   :alt: map to buried treasure
-
-.. figure:: .function.png
-   :scale: 50 %
-   :alt: map to buried treasure

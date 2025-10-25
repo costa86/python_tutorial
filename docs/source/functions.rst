@@ -18,12 +18,25 @@ Functions in Mathematics
 
 As a basic example:
 
-__________________________
-f(x) = x + 2 
+.. container:: custom
+   
+   f(x) = x + 2 
 
-Where:
+   Where:
 
-f: the name of the function
-x: the input
-x + 2: the output
-___________________________
+   f: the name of the function
+   x: the input
+   x + 2: the output
+
+
+compound
+
+.. compound::
+   
+   f(x) = x + 2 
+
+   Where:
+
+   f: the name of the function
+   x: the input
+   x + 2: the output

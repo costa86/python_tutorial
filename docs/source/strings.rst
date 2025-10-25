@@ -85,23 +85,21 @@ Escape sequences
 These are special characters that can be used in strings to provide some additional features. They are denoted by a backslash ``\``, followed by the character. 
 For instance:
 
-=======  ======  ======
-Header1  Header2 Header3
-=======  ======  ======
-A        B       C
-D        E       F
-=======  ======  ======
-
-.. list-table:: Example Table
-   :widths: 25 25 50
+.. list-table:: Special Character Reference
    :header-rows: 1
+   :widths: 15 35
 
-   * - Name
-     - Age
-     - Occupation
-   * - Alice
-     - 30
-     - Developer
-   * - Bob
-     - 28
-     - Writer
+   * - Character
+     - Meaning
+   * - \n
+     - Newline character
+   * - \t
+     - Tab character
+   * - ‘
+     - Single quote
+   * - “
+     - Double quote
+   * - \b
+     - Backspace character
+   * - \r
+     - Carriage return character

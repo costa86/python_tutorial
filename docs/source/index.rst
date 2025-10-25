@@ -49,5 +49,6 @@ Contents
    functions
    lists
    tuples
+   dictionaries
 
    

@@ -1,6 +1,18 @@
-def say_hi():
+def count_binary_substrings(s):
+    groups = []
+    count = 1
 
-    print("Hi")
+    for i in range(1, len(s)):
+        
+        if s[i] == s[i - 1]:
+            count += 1
+            continue
+        
+        groups.append(count)
+        count = 1
+    
+    groups.append(count)
+    return groups
 
-
-print(say_hi())  # => None
+a = count_binary_substrings("00110")
+print(a)

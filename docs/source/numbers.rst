@@ -4,7 +4,7 @@ Numbers
 
 In Python, numbers can be represented as three diﬀerent types:
 
-int
+Int
 -----------
 
 Short for "integer". This type is used to represent whole numbers. Being positive, negative, or zero.
@@ -28,7 +28,8 @@ Short for "integer". This type is used to represent whole numbers. Being positiv
 Float
 ----------------
 
-Also can be positive, negative or zero. It's used to represent decimal numbers. Floats can also be used to represent scientiﬁc notation, adopting "e" to indicate the power of 10.
+Also can be positive, negative or zero. It's used to represent decimal numbers. Floats can also be used to represent 
+`scientiﬁc notation <https://en.wikipedia.org/wiki/Scientific_notation>`_, adopting "e" to indicate the power of 10.
 
 .. code-block:: python
    :linenos:

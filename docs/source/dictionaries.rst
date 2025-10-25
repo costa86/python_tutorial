@@ -77,7 +77,7 @@ By using a more concise and readable syntax:
 This is a dict created with dict comprehension. Let's go over its details in two parts:
 
 - Deﬁnes what will be in the new dict: ``k: v`` (``k`` for the key and ``v`` for the value)
-- Deﬁnes the iteration over the original list: ``for k, v in employees_list`` (a tuple used as an iterator, where ``k`` is index 0 and ``v`` is intex 1)
+- Deﬁnes the iteration over the original list: ``for k, v in employees_list`` (a tuple used as an iterator, where ``k`` is index 0 and ``v`` is index 1)
 
 ``employees_dict_over_30``
 

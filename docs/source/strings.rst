@@ -91,15 +91,15 @@ For instance:
 
    * - Character
      - Meaning
-   * - \n
+   * - \\n
      - Newline character
-   * - \t
+   * - \\t
      - Tab character
-   * - ‘
+   * - \\‘
      - Single quote
-   * - “
+   * - \\“
      - Double quote
-   * - \b
+   * - \\b
      - Backspace character
-   * - \r
+   * - \\r
      - Carriage return character

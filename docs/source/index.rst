@@ -20,10 +20,10 @@ This is basic neuroscience: it’s only by a constant exposure to a subject that
 Start by practicing the examples as they are shown, then modify them, play around, explore the possibilities.
 You will find a pattern in the chapters:
    
-   1. The concept itself. What it is, what it’s used for.
-   2. A real-life analogy. From Biology, Business and Mathematics. The goal is to present the concepts in a more relatable way.
-   3. Examples. Start using the concept right away, in its most basic form.
-   4. Notes and extra information. That covers mostly questions to answers I had myself, and other relevant things.
+   1. **The concept itself**. What it is, what it’s used for.
+   2. **A real-life analogy**. From Biology, Business and Mathematics. The goal is to present the concepts in a more relatable way.
+   3. **Examples**. Start using the concept right away, in its most basic form.
+   4. **Notes and extra information**. That covers mostly questions to answers I had myself, and other relevant things.
 
 How to support
 --------------

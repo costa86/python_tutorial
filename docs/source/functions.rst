@@ -175,7 +175,7 @@ Typically, that's how you call functions in Python. But in certain situations, y
 Understanding this concept is crucial to comprehend how it's also possible to call a Python function with a dynamic quantity of parameters.
 
 
-With unnamed parameters (*args)
+With unnamed parameters (`*args`)
 ----------------------------------
 
 Here's a function to be called with multiple unnamed parameters:
@@ -278,83 +278,108 @@ In this example, ``calculate()`` is a function that receives a callable fun para
 Then, inside it, the fun function is called using x and y as arguments. Notice that now I can call calculate with both ``get_sum()`` and ``get_calculation()`` 
 functions as arguments!
 
-INFO: Another detail to pay attention to is the fact that when I call calculate(), its argument functions get_sum and get_calculation are not called (notice the absence of parentheses in the arguments). This means I am passing only a reference to these functions as arguments, as opposed to the outputted result of calling them. In other words, if I passed get_sum(5,10) instead, it would be the same as passing the integer 15, which is not what you want.
+.. note::
 
-INFO: As you may have noticed, it would have made more sense to just call get_sum() and get_calculation() functions individually, rather than using this new calculate() function with them. But this is just a basic example to demonstrate the concept, which can be far more useful in other situations.
+   Another detail to pay attention to is the fact that when I call ``calculate()``, its argument functions ``get_sum`` and ``get_calculation`` are not called 
+   (notice the absence of parentheses in the arguments). This means I am passing only a reference to these functions as arguments, 
+   as opposed to the outputted result of calling them. In other words, if I passed ``get_sum(5,10)`` instead, it would be the same as passing the integer 15, 
+   which is not what you want.
+
+.. note::
+
+   As you may have noticed, it would have made more sense to just call get_sum() and get_calculation() functions individually, rather than using this new calculate() function with them. But this is just a basic example to demonstrate the concept, which can be far more useful in other situations.
 
 
 Documenting functions
+----------------------
 
 In certain situations, you may want to provide a clearer explanation of what a function does, its parameters, and its return values. 
 
-Instead of using comments "#", the suggestion is that you use function documentation, also known as "docstrings". The syntax if very basic: the ﬁrst string you place after the function deﬁnition will be treated as its documentation:
-___________________________________________________________________
-def add(a: int, b: int) -> int: 
-   	 """
-    	Add two numbers and return the result.
+Instead of using comments "#", the suggestion is that you use function documentation, also known as "docstrings". 
+The syntax if very basic: the ﬁrst string you place after the function deﬁnition will be treated as its documentation:
 
-    	Parameters:
-    	a (int): The first number to add. b (int): The second number to add.
+.. code-block:: python
+   :linenos:
 
-    	Returns:
-    	int: The sum of a and b. 
-    	"""
-	return a + b
+   def add(a: int, b: int) -> int: 
+         """
+         Add two numbers and return the result.
 
-# This can be used to output the function's docstring 
-print(add.__doc__)
-___________________________________________________________________
+         Parameters:
+         a (int): The first number to add. b (int): The second number to add.
 
-INFO: If you are using an IDE or other text editor with support for docstrings, you should also be able to see this documentation by hovering over the function's deﬁnition with your mouse pointer.
+         Returns:
+         int: The sum of a and b. 
+         """
+      return a + b
+
+   # This can be used to output the function's docstring 
+   print(add.__doc__)
+
+
+.. note::
+
+   If you are using an IDE or other text editor with support for docstrings, you should also be able to see this documentation by hovering over the function's deﬁnition with your mouse pointer.
 
 
 Anonymous/lambda functions
+-----------------------------
 
-In many programming languages there's this special kind of function called "anonymous functions". In Python, they are known as "lambda" functions. Basically they are used for writing short operations. Its syntax is: lambda <parameters> : <returned expression>.
+In many programming languages there's this special kind of function called "anonymous functions". In Python, they are known as "lambda" functions. 
+Basically they are used for writing short operations. Its syntax is: ``lambda <parameters> : <returned expression>``.
 
 The syntax of a lambda function may look unfamiliar at ﬁrst glance, so let's go through some examples in order to make it clearer:
-___________________________________________________________________
-add_two = lambda x: x + 2 
-multiply_two_numbers = lambda x, y: x * y
-get_stanley_only = lambda x: "stanley hudson" if x == "sh" else None
 
-print(add_two(5)) # => 7 
-print(multiply_two_numbers(5, 2)) # => 10
-print(get_stanley_only("sh")) # => stanley hudson 
-print(get_stanley_only("ms")) # => None
-___________________________________________________________________
+.. code-block:: python
+   :linenos:
+
+   add_two = lambda x: x + 2 
+   multiply_two_numbers = lambda x, y: x * y
+   get_stanley_only = lambda x: "stanley hudson" if x == "sh" else None
+
+   print(add_two(5)) # => 7 
+   print(multiply_two_numbers(5, 2)) # => 10
+   print(get_stanley_only("sh")) # => stanley hudson 
+   print(get_stanley_only("ms")) # => None
+
 
 About the lambda functions in the previous example:
 
-add_two
+``add_two``
 
-Receives one parameter x and returns x plus 2.
+Receives one parameter ``x`` and returns ``x`` plus 2.
 
-multiply_two_numbers
+``multiply_two_numbers``
 
-Receives two parameters x and y and returns x multiplied by y. 
+Receives two parameters ``x`` and ``y`` and returns ``x`` multiplied by ``y``. 
 
-get_stanley_only
+``get_stanley_only``
 
-Receives a parameter x and returns either "stanley hudson" (if x is equals to "sh"), or None (if x is any other value).
+Receives a parameter ``x`` and returns either "stanley hudson" (if ``x`` is equals to "sh"), or ``None`` (if ``x`` is any other value).
 
 Function chaining
+-----------------
 
 It’s also possible to attach the return of a function to another function, making them work as a chain:
-___________________________________________________________________
-# CASE 1
-last_letter_upper = "a-c".replace("c", "b").upper().split("-").pop()
-print(last_letter_upper) #=> “B”
 
-# CASE 2
-starts_with_1 = int(40).__add__(60).__str__().startswith("1")
-print(starts_with_1) #=> True 
-___________________________________________________________________
+.. code-block:: python
+   :linenos:
 
-CASE 1
+   # CASE 1
+   last_letter_upper = "a-c".replace("c", "b").upper().split("-").pop()
+   print(last_letter_upper) #=> “B”
 
-I am replacing “c” with “b”, then turning the string into uppercase. The split() function turns the string into a list, separating the elements by “-”, which returns list([“A”,”B”]). Finally, pop() returned the last element of the list. So, 4 functions were chained to output the desired result!   
+   # CASE 2
+   starts_with_1 = int(40).__add__(60).__str__().startswith("1")
+   print(starts_with_1) #=> True 
 
-CASE 2
 
-Now I am adding 60 to 40, which outputs 100. Then turning it into a str, then checking if this string starts with “1”, which is True. 
+``CASE 1``
+
+I am replacing “c” with “b”, then turning the string into uppercase. The ``split()`` function turns the string into a list, 
+separating the elements by “-”, which returns ``list([“A”,”B”])``. Finally, ``pop()`` returned the last element of the list. 
+So, 4 functions were chained to output the desired result!   
+
+``CASE 2``
+
+Now I am adding 60 to 40, which outputs 100. Then turning it into a string, then checking if this string starts with “1”, which is ``True``. 

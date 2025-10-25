@@ -57,7 +57,7 @@ Also, it's the most modern approach. Notice the “f” must be placed right bef
  
 Notice the “+” sign. When dealing with strings, it means concatenation (joining). If you use it with numbers, such as integers or ﬂoats, it means a mathematical sum. 
 This ability to perform different actions according to how it’s used is called polymorphism (poly=many, morph=form). 
-So, in Python, the “+” sign is polymorphic. You will see about numbers in the :doc:`Numbers` chapter.
+So, in Python, the “+” sign is polymorphic. You will see about numbers in the :doc:`numbers` chapter.
 
 ``greeting_3``
 

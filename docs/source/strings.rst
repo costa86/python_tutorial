@@ -106,6 +106,7 @@ For instance:
 
 .. code-block:: python
    :linenos:
+
    print("This is a\ttabbed string.")
    print("This is a\nstring with a new line.")
    print("This is a string with a backslash: \\")
@@ -113,6 +114,7 @@ For instance:
    print("This is a string with a double quote: \"")
 
 .. code-block:: console
+
    This is a   	tabbed string.
    This is a
    string with a new line.
@@ -128,6 +130,7 @@ This can be accomplished by appending "r" right before the beginning of a string
 
 .. code-block:: python
    :linenos:
+
    jan_photo = r"C:\Users\Michael\princess_of_jamaica.jpg"
    print(jan_photo) # => C:\Users\Michael\princess_of_jamaica.jpg
 
@@ -139,6 +142,7 @@ The concept of indexes and slicing will be covered in the Lists chapter.
 
 .. code-block:: python
    :linenos:
+
    name = "RYAN"
 
    print(name[0]) # => R

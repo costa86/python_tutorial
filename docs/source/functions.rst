@@ -169,10 +169,8 @@ First, take a look at this function:
    print(greet(person_name="Michael"))
 
 
-As you can see, I can call the function either by simply passing "Michael", or by explicitly stating that the person_name parameter is "Michael".
-
+As you can see, I can call the function either by simply passing "Michael", or by explicitly stating that the ``person_name`` parameter is "Michael".
 Typically, that's how you call functions in Python. But in certain situations, you may want to enforce one approach over the other.
-
 Understanding this concept is crucial to comprehend how it's also possible to call a Python function with a dynamic quantity of parameters.
 
 
@@ -194,7 +192,7 @@ Here's a function to be called with multiple unnamed parameters:
    print(b) # => (1, 'Kelly', 52.5, True, [1,2])
    print(type(a), type(b))  # => <class 'tuple'> <class 'tuple'>
 
-Notice that in both calls to the get_multiple_unnamed_parameters() function, the arguments are not named (they are simply passed in a sequence). Also, notice that I called it with diﬀerent quantities of arguments.
+Notice that in both calls to the ``get_multiple_unnamed_parameters()`` function, the arguments are not named (they are simply passed in a sequence). Also, notice that I called it with diﬀerent quantities of arguments.
 
 .. note::
 
@@ -288,7 +286,9 @@ functions as arguments!
 
 .. note::
 
-   As you may have noticed, it would have made more sense to just call get_sum() and get_calculation() functions individually, rather than using this new calculate() function with them. But this is just a basic example to demonstrate the concept, which can be far more useful in other situations.
+   As you may have noticed, it would have made more sense to simply call ``get_sum()`` and ``get_calculation()`` functions individually, 
+   rather than using this ``new calculate()`` function with them. But this is just a basic example to demonstrate the concept, 
+   which can be far more useful in other situations!
 
 
 Documenting functions

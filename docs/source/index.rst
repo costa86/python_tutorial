@@ -18,5 +18,6 @@ Contents
 .. toctree::
    strings
    numbers
+   functions
 
    

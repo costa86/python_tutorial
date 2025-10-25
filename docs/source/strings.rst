@@ -103,3 +103,55 @@ For instance:
      - Backspace character
    * - \\r
      - Carriage return character
+
+.. code-block:: python
+   :linenos:
+   print("This is a\ttabbed string.")
+   print("This is a\nstring with a new line.")
+   print("This is a string with a backslash: \\")
+   print('This is a string with a single quote: \'')
+   print("This is a string with a double quote: \"")
+
+.. code-block:: console
+   This is a   	tabbed string.
+   This is a
+   string with a new line.
+   This is a string with a backslash: \
+   This is a string with a single quote: '
+   This is a string with a double quote: "
+
+Raw strings
+------------------
+In certain situations, you may want to actually use these escaped characters demonstrated above. 
+A common use case is for ﬁle paths on Windows computers, which include the backslash "\" character. 
+This can be accomplished by appending "r" right before the beginning of a string:
+
+.. code-block:: python
+   :linenos:
+   jan_photo = r"C:\Users\Michael\princess_of_jamaica.jpg"
+   print(jan_photo) # => C:\Users\Michael\princess_of_jamaica.jpg
+
+Slicing strings
+--------------------
+You can get parts of a string by accessing their indexes. 
+In Python, we start counting indexes/positions at 0, and negative indexes are counted backwards, from end to start. 
+The concept of indexes and slicing will be covered in the Lists chapter.
+
+.. code-block:: python
+   :linenos:
+   name = "RYAN"
+
+   print(name[0]) # => R
+   print(name[1]) # => Y
+   print(name[2]) # => A
+   print(name[3]) # => N
+   print(name[-1]) # => N
+   print(name[1:3]) # => YA
+
+Some string methods
+------------------------
+Here are some usages of popular methods available for strings. 
+Check them at https://docs.python.org/3/library/stdtypes.html#str.capitalize.  
+The concept of "method" will be explained in the Classes chapter. 
+For now, keep in mind they are a way of providing extra-capabilities to objects such as strings in this case. 
+For example, turning a string into uppercase or lowercase. 

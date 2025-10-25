@@ -12,13 +12,13 @@ Arithmetic operators
    * - Operator
      - Description
      - Example
-   * - +
+   * - `+`
      - Addition
      - ``3 + 5`` returns ``8``
-   * - -
+   * - `-`
      - Subtraction
      - ``7 - 2`` returns ``5``
-   * - *
+   * - `*`
      - Multiplication
      - ``2 * 4`` returns ``8``
    * - /

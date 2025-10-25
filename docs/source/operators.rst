@@ -144,13 +144,13 @@ Logical operators
    * - Operator
      - Description
      - Example
-   * - and
+   * - ``and``
      - Returns ``True`` if all operands are ``True``
      - ``True and False`` returns ``False``
-   * - or
+   * - ``or``
      - Returns ``True`` if at least one operand is ``True``
      - ``True or False`` returns ``True``
-   * - not
+   * - ``not``
      - Returns ``True`` if the operand is ``False``
      - ``not True`` returns ``False``
 
@@ -195,10 +195,10 @@ Membership operators
    * - Operator
      - Description
      - Example
-   * - in
+   * - ``in``
      - Evaluates to True if a value is found in a collection
      - ``3 in [1, 2, 3, 4]`` returns ``True``
-   * - not in
+   * - ``not in``
      - Evaluates to True if a value is not found in a collection
      - ``5 not in [1, 2, 3, 4]`` returns ``True``
 

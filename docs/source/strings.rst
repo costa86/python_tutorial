@@ -75,6 +75,7 @@ An interesting use case for strings is being able to replicate it multiple times
 
 .. code-block:: python
    :linenos:
+
    branch = "Buffalo" 
    many_times = branch * 3
    print(many_times) # => "BuffaloBuffaloBuffalo"

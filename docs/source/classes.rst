@@ -199,15 +199,32 @@ Multiple inheritance
 
 Another capability allowed is multiple inheritance. The same way a child can inherit traits from both their parents, 
 the ``SalesPerson`` class could also inherit from a ``Singer`` class, for instance. 
-Just add Singer as a second argument in ``SalesPerson:``.
+Just add ``Singer`` as a second argument in ``SalesPerson:``.
 
 .. code-block:: python
    :linenos:
 
-    class SalesPerson(Employee, Singer):
-        # Properties and methods are inherited from both “Employee” and “Singer” classes
-        pass
+    class Employee:
+        def __init__(self):
+            self.company = "Dunder Mifflin"
 
+
+    class Singer:
+        def __init__(self):
+            self.instrument = "Banjo"
+
+
+    class SalesPerson(Employee, Singer):
+        def __init__(self):
+            Employee.__init__(self) # check this out
+            Singer.__init__(self) # check this out
+
+
+    sales_person = SalesPerson()
+    all_properties = vars(sales_person) # => {'company': 'Dunder Mifflin', 'instrument': 'Banjo'}
+    print(all_properties)
+
+Also, notice the way the parents ``Employee`` and ``Singer`` are initiated are a little different.
 
 Multilevel inheritance
 -----------------------

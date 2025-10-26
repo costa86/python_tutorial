@@ -1,17 +1,21 @@
-class Employee:
+class Father:
     def __init__(self):
-        self.company = "Dunder Mifflin"
+        self.eye_color = "green"
 
 
-class Singer:
+class Mother:
     def __init__(self):
-        self.intrument = "Banjo"
+        self.hair_color = "black"
 
 
-class SalesPerson(Employee, Singer):
-    pass
+class Child(Father, Mother):
+    def __init__(self):
+        Father.__init__(self)
+        Mother.__init__(self)
 
 
-a = SalesPerson()
-print(a.company)
-print(a.intrument)
+child = Child()
+
+print(child.hair_color)
+print(child.eye_color)
+print(Child.mro())

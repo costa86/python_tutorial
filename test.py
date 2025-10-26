@@ -25,12 +25,12 @@ all_available = dir(sales_person)
 
 all_properties = vars(sales_person)
 
-all_methods = [
+all_custom_methods = [
     i
     for i in dir(sales_person)
     if callable(getattr(sales_person, i)) and not i.startswith("__")
 ]
 
-print("Everything available", all_available)
-print("All the properties", all_properties)
-print("All the methods", all_methods)
+print("Everything available: ", all_available)
+print("All the properties: ", all_properties)
+print("All the custom methods: ", all_custom_methods)

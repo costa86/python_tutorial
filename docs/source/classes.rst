@@ -207,6 +207,11 @@ Just add ``Singer`` as a second argument in ``SalesPerson:``.
     class Employee:
         def __init__(self):
             self.company = "Dunder Mifflin"
+            self.salary = 0.0
+
+        def promote(self, salary_raise: float) -> float:
+            self.salary += salary_raise
+            return self.salary
 
 
     class Singer:
@@ -216,15 +221,40 @@ Just add ``Singer`` as a second argument in ``SalesPerson:``.
 
     class SalesPerson(Employee, Singer):
         def __init__(self):
-            Employee.__init__(self) # check this out
-            Singer.__init__(self) # check this out
+            Employee.__init__(self)
+            Singer.__init__(self)
 
 
     sales_person = SalesPerson()
-    all_properties = vars(sales_person) # => {'company': 'Dunder Mifflin', 'instrument': 'Banjo'}
-    print(all_properties)
 
-Also, notice the way the parents ``Employee`` and ``Singer`` are initiated are a little different.
+    all_available = dir(sales_person)
+
+    all_properties = vars(sales_person)
+
+    all_custom_methods = [
+        i
+        for i in dir(sales_person)
+        if callable(getattr(sales_person, i)) and not i.startswith("__")
+    ]
+
+    print("Everything available: ", all_available)
+    print("All the properties: ", all_properties)
+    print("All the custom methods: ", all_custom_methods)
+
+
+- Notice the way the parents ``Employee`` and ``Singer`` are initiated are a little different in ``SalesPerson``.
+- Notice the output of ``vars(sales_person)``. This built-in function is handy to see all the properties in an object.
+- ``all_custom_methods`` is a interesting example of what can be done with list comprehension.
+
+See the output:
+
+.. code-block:: console
+
+    Everything available:  ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'company', 'instrument', 'promote', 'salary']
+    All the properties:  {'company': 'Dunder Mifflin', 'salary': 0.0, 'instrument': 'Banjo'}
+    All the custom methods:  ['promote']
+
+
 
 Multilevel inheritance
 -----------------------

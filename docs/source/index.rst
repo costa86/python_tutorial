@@ -56,5 +56,5 @@ Contents
    conditionals
    deconstructing
    loops
-   Match statement   
+   match   
    absense

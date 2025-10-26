@@ -118,252 +118,318 @@ Inheritance
 
 This is an interesting concept in classes whose name is inspired by the concept of inheritance in biology.
 
-In biology, it means the passing of traits from one generation to the next through their genes. As a very basic example, If a woman has blue eyes and she gives birth to a boy with blue eyes too, one may say that the boy inherited his eye color from his mother.
-
+In biology, it means the passing of traits from one generation to the next through their genes. 
+As a very basic example, If a woman has blue eyes and she gives birth to a boy with blue eyes too, one may say that the boy inherited his eye color from his mother.
 In classes, "inheritance" is a way of mimicking this same concept.
 
-If a company has employees, and some of them are salespeople, these salespeople are employees too, right? In this situation, it makes sense to represent this idea with a new class SalesPerson (child), that would inherit from the Employee (parent) class we already created.
+If a company has employees, and some of them are salespeople, these salespeople are employees too, right? 
+In this situation, it makes sense to represent this idea with a new class ``SalesPerson`` (child), that would inherit from the ``Employee`` (parent) class we 
+already created. The immediate beneﬁt here is that we don't have to rewrite the attributes ``name``, ``salary`` and ``company`` for ``SalesPerson``, 
+since they all have been inherited from the ``Employee`` parent class, and are automatically available for usage. 
+The methods are inherited too. Let's see how it works:
 
-The immediate beneﬁt here is that we don't have to rewrite the attributes name, salary and company for SalesPerson, since they all have been inherited from the Employee class, and are automatically available for usage. The methods are inherited too. Let's see how it works:
-___________________________________________________________________
-class Employee:
-    	def __init__(self, name: str, salary: float = 1000.0) -> None: 
-        	self.name = name
-        	self.salary = salary 
-        	self.company = "Dunder Mifflin"
+.. code-block:: python
+   :linenos:
 
-    	def __str__(self) -> str:
-        	return f"Hi, I am {self.name} and I work at {self.company}. My salary is € {self.salary}"
+    class Employee:
+        def __init__(self, name: str, salary: float = 1000.0) -> None: 
+            self.name = name
+            self.salary = salary 
+            self.company = "Dunder Mifflin"
 
-    	def promote(self, salary_raise: float) -> float: 
-        	self.salary += salary_raise
-        	return self.salary
+        def __str__(self) -> str:
+            return f"Hi, I am {self.name} and I work at {self.company}. My salary is € {self.salary}"
 
-
-class SalesPerson(Employee): # Inherits from "Employee"
-	def __init__(self, name: str, salary: float = 1000.0, sales: float = 0.0) -> None:
-        	super().__init__(name, salary) 
-        	self.sales = sales
-
-    	def __str__(self) -> str:
- 	return f"Hi, I am {self.name} and I am a salesperson at {self.company}. My total in sales is € {self.sales}"
-
-    	def make_sale(self, sale_amount: float) -> None: 
-        	self.sales += sale_amount
-
-employee_1 = SalesPerson("Andy") 
-employee_1.promote(50.0) 
-employee_1.make_sale(10.0)
+        def promote(self, salary_raise: float) -> float: 
+            self.salary += salary_raise
+            return self.salary
 
 
-print(employee_1) # => Hi, I am Andy and I am a salesperson at Dunder Mifflin. My total in sales is € 10.0
-___________________________________________________________________
+    class SalesPerson(Employee): # Inherits from "Employee"
+        def __init__(self, name: str, salary: float = 1000.0, sales: float = 0.0) -> None:
+            super().__init__(name, salary) 
+            self.sales = sales
+
+        def __str__(self) -> str:
+            return f"Hi, I am {self.name} and I am a salesperson at {self.company}. My total in sales is € {self.sales}"
+
+        def make_sale(self, sale_amount: float) -> None: 
+            self.sales += sale_amount
+
+    employee_1 = SalesPerson("Andy") 
+    employee_1.promote(50.0) 
+    employee_1.make_sale(10.0)
+
+    print(employee_1) # => Hi, I am Andy and I am a salesperson at Dunder Mifflin. My total in sales is € 10.0
+
+
 Let's unpack some new concepts here:
 
-class SalesPerson(Employee)
+``class SalesPerson(Employee)``
 
-Notice the new syntax here: I added parentheses and placed Employee inside it. This indicates that SalesPerson will inherit the properties and methods from Employee.
+Notice the new syntax here: I added parentheses and placed ``Employee`` inside it. 
+This indicates that ``SalesPerson`` will inherit the properties and methods from ``Employee``.
 
-super().__init__(name, salary)
+``super().__init__(name, salary)``
 
-This means that I am calling the __init__() method of the parent class (Employee), by passing the name, and salary arguments that I received from the __ init__() method of the child class SalesPerson. Notice that now I have a new attribute sales being passed via the constructor (remember the __init__() method is known as "constructor") of SalesPerson. 
+This means that I am calling the ``__init__()`` method of the parent class (``Employee``), by passing the ``name``, and ``salary`` arguments that 
+I received from the ``__init__()`` method of the child class ``SalesPerson``. 
+Notice that now I have a new attribute ``sales`` being passed via the constructor (remember the ``__init__()`` method is known as "constructor") of ``SalesPerson``. 
 
-INFO: Just to be clear, the sales attribute is exclusive to SalesPerson, and it's not available in the parent class Employee. Inheritance is a one-way route, from parent to children.
+.. warning::
 
-__str__(self)
+    Just to be clear, the ``sales`` attribute is exclusive to ``SalesPerson``, and it's **not** available in the parent class ``Employee``! 
+    Inheritance is a one-way route, from parent to children.
 
-Another interesting thing happens here. Even though this method is automatically inherited from the parent, I wrote it again here. The reason is that I have decided to customize it for the SalesPerson child class. With that, the inherited method from the parent is ignored and the one in the child is used instead. This procedure is known as "method overriding". See the result in print(employee_1).
+``__str__(self)``
 
-employee_1.promote(50.0)
+Another interesting thing happens here. Even though this method is automatically inherited from the parent, I declared it again here. 
+The reason is that I have decided to customize it for the ``SalesPerson`` child class. 
+With that, the inherited method from the parent is ignored and the one in the child is used instead. 
+This procedure is known as "method overriding". See the result in ``print(employee_1)``.
 
-This is just to prove that the method promote() is available here too.
+``employee_1.promote(50.0)``
 
-make_sale(self, sale_amount: int)
+This is just to prove that the method ``promote()`` is available here too.
+
+``make_sale(self, sale_amount: int)``
 
 As expected, you can normally add new methods to a child class.
 
 Multiple inheritance
+---------------------
 
-Another capability allowed is multiple inheritance. The same way a child can inherit traits from both their parents, the SalesPerson class could also inherit from a Singer class, for instance. Just add Singer as a second argument in SalesPerson:
-___________________________________________________________________
-class SalesPerson(Employee, Singer):
-    # Properties and methods inherited from both “Employee” and “Singer” classes
-___________________________________________________________________
+Another capability allowed is multiple inheritance. The same way a child can inherit traits from both their parents, 
+the ``SalesPerson`` class could also inherit from a ``Singer`` class, for instance. 
+Just add Singer as a second argument in ``SalesPerson:``.
+
+.. code-block:: python
+   :linenos:
+
+    class SalesPerson(Employee, Singer):
+        # Properties and methods are inherited from both “Employee” and “Singer” classes
+        pass
+
 
 Multilevel inheritance
+-----------------------
 
-And it gets more wild! You can create a new JuniorSalesPerson class that would inherit from both SalesPerson and Employee classes vertically. The same way a person can inherit traits from their parents and grandparents at the same time:
-___________________________________________________________________
-class Employee:
-    # Attribute "A" added
+And it gets more wild! You can create a new ``JuniorSalesPerson`` class that would inherit from both ``SalesPerson`` and ``Employee`` classes vertically. 
+The same way a person can inherit traits from their parents and grandparents at the same time:
 
-class SalesPerson(Employee):
-    # Attribute "A" inherited from "Employee". 
-    # Attribute "B" added
+.. code-block:: python
+   :linenos:
 
-class JuniorSalesPerson(SalesPerson):
-    # Attributes "A" and "B" inherited from "SalesPerson". 
-    # Attribute "C" added
-___________________________________________________________________
+    class Employee:
+        def __init__(self, name: str):
+            self.name = name
 
-WARNING: Class inheritance can be an interesting approach to avoid repetition of code, as you can see. On the other side, keep in mind that it can become hard to manage as the complexity of your program increases. So use it wisely!
+        def __str__(self):
+            return f"My name is {self.name}"
+
+
+    class SalesPerson(Employee):
+        pass
+
+
+    class JuniorSalesPerson(SalesPerson):
+        pass
+
+    print(JuniorSalesPerson("Clark"))  # => My name is Clark
+
+
+As seen above, ``JuniorSalesPerson`` inherited the ``__str__()`` method from ``SalesPerson`` which was inherited from ``Employee``.
+
+.. warning::
+
+    Class inheritance can be an interesting approach to avoid repetition of code, as you can see. On the other side, 
+    keep in mind that it can become hard to manage as the complexity of your program increases, so use it wisely!
 
 Composition
+---------------------
 
-This is a different approach to handle relationships between classes. This style tends to provide more flexibility and reusability, as it separates the responsibilities of the individual classes. 
-We will imagine a scenario that can be handled either with inheritance or composition. Then we’ll write two possible solutions, so we can compare both approaches.
+This is a different approach to handle relationships between classes. 
+This style tends to provide more flexibility and reusability, as it separates the responsibilities of the individual classes. 
+We will imagine a scenario that can be handled either with inheritance or composition. 
+Then we’ll write two possible solutions, so we can compare both approaches.
 
-Dunder Mifflin is a company that sells paper. It was acquired by another company named Saber, which sells printers. As a result of the acquisition, now Dunder Mifflin’s salespeople sell both paper and printers. Let’s see a possible way to represent this using inheritance:
-___________________________________________________________________
-class SchruteFarmsSalesPerson:
-    """
-    I sell beets
-    """
+Dunder Mifflin is a company that sells paper. It was acquired by another company named Saber, which sells printers. 
+As a result of the acquisition, now Dunder Mifflin’s salespeople now sell both paper and printers. Let’s see a possible way to represent this using inheritance:
 
-    beets = ["Normal Beets", "Money Beets"]
+.. code-block:: python
+   :linenos:
 
+    class SchruteFarmsSalesPerson:
+        """
+        I sell beets
+        """
 
-class SaberSalesPerson:
-    """
-    I sell printers
-    """
-
-    printers = ["Printer C", "Printer D"]
-
-
-class DunderMiffinSalesPerson(SaberSalesPerson):
-    """
-    I sell paper
-    """
-
-    def __init__(self, name: str) -> None:
-        self.name = name
-
-    papers = ["Paper A", "Paper B"]
+        beets = ["Normal Beets", "Money Beets"]
 
 
-jim = DunderMiffinSalesPerson("Jim")
-dwight = DunderMiffinSalesPerson("Dwight")
+    class SaberSalesPerson:
+        """
+        I sell printers
+        """
 
-print("Jim", jim.printers) # => Jim ['Printer C', 'Printer D']
-print("Dwight", dwight.papers) # => Dwight ['Paper A', 'Paper B']
-___________________________________________________________________
+        printers = ["Printer C", "Printer D"]
+
+
+    class DunderMiffinSalesPerson(SaberSalesPerson):
+        """
+        I sell paper
+        """
+
+        def __init__(self, name: str) -> None:
+            self.name = name
+
+        papers = ["Paper A", "Paper B"]
+
+
+    jim = DunderMiffinSalesPerson("Jim")
+    dwight = DunderMiffinSalesPerson("Dwight")
+
+    print("Jim", jim.printers) # => Jim ['Printer C', 'Printer D']
+    print("Dwight", dwight.papers) # => Dwight ['Paper A', 'Paper B']
+
 
 
 What we just did:
 
-class DunderMiffinSalesPerson(SaberSalesPerson)
+``class DunderMiffinSalesPerson(SaberSalesPerson)``
 
-We added SaberSalesPerson as a parent class to DundlerMifflinSalesPerson. Now, every instance of a DunderMiffienSalesPerson  will have the printers property too. With that, we created two instances (jim and dwight), to represent salespeople at Dunder Mifflin, granting them the papers and printers properties. 
+We added ``SaberSalesPerson`` as a parent class to ``DundlerMifflinSalesPerson``. 
+Now, every instance of a ``DunderMiffienSalesPerson`` will have the ``printers`` property too. 
+With that, we created two instances (``jim`` and ``dwight``), to represent salespeople at Dunder Mifflin, granting them the ``papers`` and ``printers`` properties. 
 
-You may have noticed an extra SchruteFarmsSalesPerson class too. Dwight happens to also be the owner of Schute farms, so he produces and sells beets too. 
+You may have noticed an extra ``SchruteFarmsSalesPerson`` class too. Dwight, happens to be the owner of Schute farms, so he produces and sells beets too! 
+Based on the concepts we just learned about multiple inheritance, we could simply add ``SchruteFarmsSalesPerson`` as a parent class to ``DundlerMifflinSalesPerson`` too, 
+so that dwight would inherit the ``beets`` property. Problem solved, right?
 
-Based on the concepts we just learned about multiple inheritance, we could simply add SchruteFarmsSalesPerson as a parent class to DundlerMifflinSalesPerson too, so that dwight would inherit the beets property. Problem solved, right?
-
-The issue is that if we do this, not only dwight, but all other instances of  DundlerMifflinSalesPerson, including jim, would inherit beets too, which would not be correct, since only Dwight sells beets…
+The issue is that if we do this, not only dwight, but all other instances of ``DundlerMifflinSalesPerson``, including ``jim``, would inherit ``beets`` too, 
+which would not be accurate, since only Dwight sells beets…
 
 Let’s see another solution, this time using composition:
 
-___________________________________________________________________
-class Product:
-	# See about “pass” in the Error/Exception handling chapter. For now, think of it as just a placeholder without any action.   
-	pass
+.. code-block:: python
+   :linenos:
 
-class Beet(Product):
-	"""
-	From Schrute farms
-	"""
-	pass
+    class Product:
+        # See about “pass” in the Error/Exception handling chapter. For now, think of it as just a placeholder without any action.   
+        pass
 
-class Printer(Product):
-	"""
-	From Saber company
-	"""
-	pass
+    class Beet(Product):
+        """
+        From Schrute farms
+        """
+        pass
 
-class Paper(Product):
-	"""
-	From Dunder Mifflin company
-	"""
-	pass
+    class Printer(Product):
+        """
+        From Saber company
+        """
+        pass
 
-class SalesPerson:
-	"""
-	I sell many products
-	"""
-	def __init__(self, name: str, products: list[Product]):
-    		self.name = name
-    		self.products = products
+    class Paper(Product):
+        """
+        From Dunder Mifflin company
+        """
+        pass
+
+    class SalesPerson:
+        """
+        I sell many products
+        """
+        def __init__(self, name: str, products: list[Product]):
+            self.name = name
+            self.products = products
 
 
-jim = SalesPerson("Jim", [Paper, Printer])
-dwight = SalesPerson("Dwight", [Paper, Printer, Beet])
+    jim = SalesPerson("Jim", [Paper, Printer])
+    dwight = SalesPerson("Dwight", [Paper, Printer, Beet])
 
-print("Jim", [i.__name__ for i in jim.products]) #=> Jim ['Paper', 'Printer']
-print("Dwight", [i.__name__ for i in dwight.products]) #=> Dwight ['Paper', 'Printer', 'Beet']
-___________________________________________________________________
+    print("Jim", [i.__name__ for i in jim.products]) #=> Jim ['Paper', 'Printer']
+    print("Dwight", [i.__name__ for i in dwight.products]) #=> Dwight ['Paper', 'Printer', 'Beet']
+
 
 
 Some aspects of the new implementation:
 
-There’s generic Product class, that was used as a parent to generate more categories of products from: Beet, Paper and Printer 
-There’s now a generic SalesPerson class instead, with a products property as a list of Product instances. As a result, now each salesperson can have their own list of products to sell. See that jim and dwight sell different products now.
+There’s generic ``Product`` class, that was used as a parent to generate more categories of products from, as new classes: ``Beet``, ``Paper`` and ``Printer`` 
+Also now we have a generic ``SalesPerson`` class, with a ``products`` property as a list of ``Product`` instances. 
+As a result, now each salesperson can have their own list of products to sell. 
+See that ``jim`` and ``dwight`` sell different products now, even though they are instances from the same class!
 
-This isolation of classes using the composition approach tends to make even more sense as the program grows.  Suppose that now we have to develop a program to manage the warehouse where Dunder Mifflin stores its products. Well, we just created a Product class, that way we can reuse it in this new warehouse program!
+This isolation of classes using the composition approach tends to make even more sense as the program grows. 
+Suppose that now we have to develop a program to manage the warehouse where Dunder Mifflin stores its products. 
+Well, we just created a ``Product`` class, that way we can reuse it in this new warehouse program!
   
 Alternatives to regular classes
+--------------------------
 
-As you may have noticed by now, class is a complex subject in Python, and it may become cumbersome sometimes. The good news is that there are some easier-to-implement alternatives, also beneﬁting from the capabilities seen in regular classes. Let's see a few of them:
+As you may have noticed by now, class is indeed a complex subject in Python, and it may become cumbersome sometimes. 
+The good news is that there are some easier-to-implement alternatives, also beneﬁting from the capabilities seen in regular classes. 
+Let's go over a few of them:
+
 Named tuples
+-------------------
 
 Here's how it works:
-___________________________________________________________________
-from collections import namedtuple
 
-Employee = namedtuple("Employee", ["name", "salary"])
+.. code-block:: python
+   :linenos:
 
-# This function will become a method in Employee. Notice the “self” parameter
-def greet_function(self) -> str:
-	return f"My name is {self.name}"
+    from collections import namedtuple
 
-# Attaching greet_function() as a method to be named “greet”
-Employee.greet = greet_function
- 
-employee_1 = Employee("Erin", 1000.0)
+    Employee = namedtuple("Employee", ["name", "salary"])
 
-print(employee_1.salary)  # => 1000.0
-print(employee_1.greet())  # => My name is Erin
-___________________________________________________________________
+    # This function will become a method in Employee. Notice the “self” parameter
+    def greet_function(self) -> str:
+        return f"My name is {self.name}"
 
-Some notes:
+    # Attaching greet_function() as a method to be named “greet”
+    Employee.greet = greet_function
+    
+    employee_1 = Employee("Erin", 1000.0)
 
-from collections import namedtuple
+    print(employee_1.salary)  # => 1000.0
+    print(employee_1.greet())  # => My name is Erin
 
-Here I am bringing namedtuple to the scope of the program, so I can use it. This is a concept better explained in the Modules chapter.
 
-Employee
+Some remarks:
 
-This is the equivalent of declaring a class. The ﬁrst argument is the name of the namedtuple itself, and the second is a list with strings representing the attributes (name and salary) of the namedtuple. Notice that I capitalized it, so it resembles a class (this is not required, though).
+``from collections import namedtuple``
 
-employee_1 = Employee("Erin", 1000.0)
+Here I am bringing ``namedtuple`` to the scope of the program, so I can use it. This is a concept better explained in the Modules chapter.
+
+``Employee``
+
+This is the equivalent of declaring a class. The ﬁrst argument is the name of the namedtuple itself, 
+and the second is a list with strings representing the attributes (``name`` and ``salary``) of the namedtuple. 
+Notice that I capitalized it, so it resembles a class (this is not required, though).
+
+``employee_1 = Employee("Erin", 1000.0)``
 
 This is the equivalent of instantiating a class. Note that all the parameters (attributes) are required.
 
-Employee.greet = greet_function
+``Employee.greet = greet_function``
 
 As you can see, attaching methods to a namedtuple is slightly different.
 
-print(employee_1.salary)
+``print(employee_1.salary)``
 
 Also, dot notation is allowed. The same way you do with regular classes.
 
-As you may have assumed, there are trade-oﬀs to using namedtuple over regular classes. Here's a few aspects of a namedtuple for your consideration before you adopt it:
+As you may have assumed, there are trade-oﬀs to using namedtuple over regular classes. 
+Here's a few aspects of a namedtuple for your consideration before you adopt it:
 
-Immutability: Just like tuples, you cannot change the properties of a namedtuple. This can be a good thing if you wish to prevent accidental changes in the “instances”.
-Efficiency: They are more lightweight than classes, which result in less computer memory usage. This can become handy if you need to deal with a large quantity of instances.
-Equivalency to tuples: If you print(employee_1 == ("Erin", 1000.0)), the result will be True. Even though the comparison is between a namedtuple and a tuple. It’s important to understand this equivalency.
+- **Immutability**: Just like tuples, you **cannot** change the properties of a namedtuple! This can be a good thing if you wish to prevent accidental changes in the “instances”.
+- **Efficiency**: They are more lightweight than classes, which result in less computer memory usage. This can become handy if you need to deal with a large quantity of instances.
+- **Equivalency to tuples**: If you ``print(employee_1 == ("Erin", 1000.0))``, the result will be ``True``. Even though the comparison is between a namedtuple and a tuple. 
+    It’s important to understand this equivalency.
 
 Dataclasses
+--------------
 
 Here's another alternative that also provides more simplicity than a regular class:
 ___________________________________________________________________

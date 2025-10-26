@@ -10,17 +10,19 @@ such as salesperson, regional manager, accountant, and so on. Let's call these p
 
 Let's see an example to make it clear:
 
+
 .. code-block:: python
    :linenos:
 
 	from enum import Enum
 
-	class JobPosition(Enum): # An enum is a class 
-		SALESPERSON = "salesperson" 
-		REGIONAL_MANAGER = "regional manager" 
-		ACCOUNTANT = "accountant"
+	class JobPosition(Enum): # An enum is a class
+			SALESPERSON = "salesperson"
+			REGIONAL_MANAGER = "regional manager"
+			ACCOUNTANT = "accountant"
 
-	introduction = f"Kevin is an {JobPosition.ACCOUNTANT.value}" 
+	introduction = f"Kevin is an {JobPosition.ACCOUNTANT.value}"
+
 	print(introduction) # => Kevin is an accountant
 
 

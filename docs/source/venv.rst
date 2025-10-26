@@ -25,15 +25,19 @@ Create a venv named "myenv" via command-line:
 
 This command is expected to have created a folder named "myenv". I suggest you check that.
 
-In order to start working with the "myenv" venv, it needs to be activated. Do it via command- line:
+In order to start working with the "myenv" venv, it needs to be activated. Do it via command line:
 
-+-------------------+-----------------------------------+
-| Operating System  | Command to activate venv          |
-+===================+===================================+
-| Linux / macOS     | source myenv/bin/activate         |
-+-------------------+-----------------------------------+
-| Windows           | "myenv\Scripts\activate.bat"        |
-+-------------------+-----------------------------------+
+Linux | macOS
+.. code-block:: console
+    
+    source myenv/bin/activate 
+
+
+Windows
+.. code-block:: console
+    
+    source myenv\\Scripts\\activate.bat 
+
 
 
 .. note::

@@ -26,6 +26,7 @@ Let's see an example to make it clear:
 
 	print(introduction) # => Kevin is an accountant
 
+
 Let's go over some details:
 
 ``from enum import Enum``

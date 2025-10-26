@@ -54,4 +54,5 @@ Contents
    boolean
    operators
    conditionals
-   deconstructing   
+   deconstructing
+   loops   

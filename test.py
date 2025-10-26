@@ -1,25 +1,12 @@
-def get_triangle_type(side_1: int, side_2: int, side_3: int) -> str:
+attempts = 3
+counter = 1
 
-    # PART 1
-    invalid_case_a = (side_1 + side_2) <= side_3
-    invalid_case_b = (side_2 + side_3) <= side_1
-    invalid_case_c = (side_3 + side_1) <= side_2
+while counter <= attempts:
+    print(f"Attempt {counter}/{attempts}")
+    employee_name = input("Employee name: ")
 
-    if invalid_case_a or invalid_case_b or invalid_case_c:
-        return "invalid"
+    if employee_name.lower() == "michael":
+        print("Hello, world's best boss!")
+        break
 
-    # PART 2
-    all_sides_equal = side_1 == side_2 == side_3
-    two_sides_equal = (side_1 == side_2) or (side_1 == side_3)
-    
-    return (
-        "equilateral"
-        if all_sides_equal
-        else "isosceles" if two_sides_equal else "scalene"
-    )
-
-
-print(get_triangle_type(6, 3, 2))  # => invalid
-print(get_triangle_type(5, 4, 3))  # => scalene
-print(get_triangle_type(4, 4, 4))  # => equilateral
-print(get_triangle_type(4, 4, 3))  # => isosceles
+    counter += 1

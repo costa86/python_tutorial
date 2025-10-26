@@ -35,8 +35,8 @@ Let's go over the implementation details:
 
 ``print_start_and_end(func)``
 
-This is the decorator function. It takes another function as a parameter, then declares an inner placeholder function called "wrapper". 
-Notice that wrapper is returned by ``print_start_and_end()`` , which triggers the call to ``print("---START---")``, then a call to ``func()`` function, 
+This is the decorator function. It takes another function as a parameter, then declares an inner placeholder function called "wrapper" (it could be any other name). 
+Notice that ``wrapper`` is returned by ``print_start_and_end()`` , which triggers the call to ``print("---START---")``, then a call to ``func()`` function, 
 then ﬁnally a call to ``print("---END---")``.
 
 .. note::
@@ -66,7 +66,7 @@ Decorating functions with parameters
 Parameters in the decorated function
 --------------------------------
 
-So far, neither the decorator nor the decorated function have taken any parameters. If you want to add parameters, a slight modiﬁcation is needed:
+So far, neither the decorator nor the decorated function have taken any parameters. If you want to add them, a slight modiﬁcation is needed:
 
 .. code-block:: python
    :linenos:
@@ -94,7 +94,7 @@ Parameters in the decorator function
 
 Another possibility is to pass arguments to the decorator function itself, which can extend even more its capabilities. 
 As a basic example, I will add a ``branch`` parameter. A few more tweaks are required, so take a closer look at the new wrapper functions inside 
-the decorator and their indentation as well:
+the decorator, **specially their indentation levels**:
 
 .. code-block:: python
    :linenos:

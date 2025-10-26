@@ -52,4 +52,5 @@ Contents
    dictionaries
    sets
    boolean
-   operators   
+   operators
+   conditionals   

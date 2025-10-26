@@ -38,7 +38,7 @@ Windows
 
 .. code-block:: console
     
-    source myenv\\Scripts\\activate.bat 
+    source myenv\Scripts\activate.bat 
 
 
 .. note::

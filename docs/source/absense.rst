@@ -37,9 +37,9 @@ In both previous functions, if the ``name`` argument is passed, then ``name`` it
     if you remember from the Functions chapter, ``None`` is implicitly returned in a function that apparently does not return anything. See this example:
 
     .. code-block:: python
-    :linenos:
+        :linenos:
 
         def return_none():
             pass
 
-    print(return_none()) => None
+        print(return_none()) => None

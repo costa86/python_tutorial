@@ -228,9 +228,9 @@ Just add ``Singer`` as a second argument in ``SalesPerson:``.
     sales_person = SalesPerson()
 
     all_available = dir(sales_person)
-
+    
     all_properties = vars(sales_person)
-
+    
     all_custom_methods = [
         i
         for i in dir(sales_person)
@@ -253,7 +253,6 @@ See the output:
     Everything available:  ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'company', 'instrument', 'promote', 'salary']
     All the properties:  {'company': 'Dunder Mifflin', 'salary': 0.0, 'instrument': 'Banjo'}
     All the custom methods:  ['promote']
-
 
 
 Multilevel inheritance
@@ -284,6 +283,11 @@ The same way a person can inherit traits from their parents and grandparents at 
 
 
 As seen above, ``JuniorSalesPerson`` inherited the ``__str__()`` method from ``SalesPerson`` which was inherited from ``Employee``.
+The flow is like this:
+
+.. code-block:: rst
+
+    JuniorSalesPerson -> SalesPerson -> Employee
 
 .. warning::
 

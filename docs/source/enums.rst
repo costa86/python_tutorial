@@ -17,9 +17,9 @@ Let's see an example to make it clear:
 	from enum import Enum
 
 	class JobPosition(Enum): # An enum is a class
-			SALESPERSON = "salesperson"
-			REGIONAL_MANAGER = "regional manager"
-			ACCOUNTANT = "accountant"
+		SALESPERSON = "salesperson"
+		REGIONAL_MANAGER = "regional manager"
+		ACCOUNTANT = "accountant"
 
 	introduction = f"Kevin is an {JobPosition.ACCOUNTANT.value}"
 

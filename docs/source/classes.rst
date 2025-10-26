@@ -50,8 +50,6 @@ For the sake of simplicity, I will adopt a new set of features instead:
             self.salary += salary_raise
             return self.salary
 
-
-
     employee_1 = Employee("Pam") 
     employee_1.promote(50.0)
 
@@ -105,8 +103,8 @@ But it's important to know the actual terms to be used and also reinforce the on
 - **Method**: A function that is defined within a class. The ``__init__()``,`` __str__()`` and ``promote()`` functions are methods of the ``Employee`` class.
 - "**Magical" methods**: Python classes have some built-in methods that are automatically called in certain situations. 
     These methods are denoted by double underscores (“__”) at the beginning and at the end of the method's name. 
-   These double underscores in Python are also known as "dunder". You can check them all at https://docs.python.org/3/reference/datamodel.html#special-method-names. 
-   Don't get overwhelmed by them, though. In most cases you are very likely to only use the mandatory ``__init__()`` one.
+    These double underscores in Python are also known as "dunder". You can check them all at https://docs.python.org/3/reference/datamodel.html#special-method-names. 
+    Don't get overwhelmed by them, though. In most cases you are very likely to only use the mandatory ``__init__()`` one.
 - **Constructor**: The ``__init__()`` method, which is responsible for instantiating the class, is also known as "constructor".
 - **Property**: This is how the attributes of an instance are referred to when accessed via dot notation. 
     Example: in ``employee_1.name``, ``name`` is a property of ``employee_1``.

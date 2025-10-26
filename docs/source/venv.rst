@@ -32,7 +32,7 @@ In order to start working with the "myenv" venv, it needs to be activated. Do it
 +===================+===================================+
 | Linux / macOS     | source myenv/bin/activate         |
 +-------------------+-----------------------------------+
-| Windows           | myenv\Scripts\activate.bat        |
+| Windows           | myenv\\Scripts\\activate.bat        |
 +-------------------+-----------------------------------+
 
 

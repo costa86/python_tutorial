@@ -59,3 +59,7 @@ Where it returns ``True`` if ``name`` is equals to (==) "michael". Otherwise, it
 
     Notice I didn't need to explicitly write ``True`` or ``False`` as return options in ``is_michael()``. 
     This is the elegance and simplicity that I mentioned earlier about booleans.
+
+.. note::
+
+    A fun fact about ``True`` and ``False`` is that they are a `Singletons <https://en.wikipedia.org/wiki/Singleton_pattern>`_ objects in Python. You'll see more about objects in the Classes chapter.

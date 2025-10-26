@@ -100,7 +100,7 @@ But it's important to know the actual terms to be used and also reinforce the on
 
 - **Instance**: The objects created by the class. The ``employee_1`` variable is an instance of the ``Employee`` class.
 - **Attributes**: the characteristics you added to the class. In the ``Employee`` class, ``name``, ``salary`` and ``company`` are its attributes.
-- **Method**: A function that is defined within a class. The ``__init__()``,`` __str__()`` and ``promote()`` functions are methods of the ``Employee`` class.
+- **Method**: A function that is defined within a class. The ``__init__()``, ``__str__()`` and ``promote()`` functions are methods of the ``Employee`` class.
 - "**Magical" methods**: Python classes have some built-in methods that are automatically called in certain situations. 
   These methods are denoted by double underscores (“__”) at the beginning and at the end of the method's name. 
   These double underscores in Python are also known as "dunder". You can check them all at https://docs.python.org/3/reference/datamodel.html#special-method-names. 
@@ -424,7 +424,7 @@ Here's a few aspects of a namedtuple for your consideration before you adopt it:
 - **Immutability**: Just like tuples, you **cannot** change the properties of a namedtuple! This can be a good thing if you wish to prevent accidental changes in the “instances”.
 - **Efficiency**: They are more lightweight than classes, which result in less computer memory usage. This can become handy if you need to deal with a large quantity of instances.
 - **Equivalency to tuples**: If you ``print(employee_1 == ("Erin", 1000.0))``, the result will be ``True``. Even though the comparison is between a namedtuple and a tuple. 
-    It’s important to understand this equivalency.
+  It’s important to understand this equivalency.
 
 Dataclasses
 --------------

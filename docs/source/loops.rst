@@ -203,6 +203,7 @@ But in this case, to skip only the current iteration. Let’s see how it works:
 
 
 Output:
+
 .. code-block:: console
 
     pam

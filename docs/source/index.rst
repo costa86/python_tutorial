@@ -63,3 +63,4 @@ Contents
    enums
    modules
    datetime
+   decorators

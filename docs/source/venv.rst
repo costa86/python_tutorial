@@ -43,7 +43,6 @@ In order to start working with the "myenv" venv, it needs to be activated. Do it
         source myenv\Scripts\activate.bat 
 
 
-
 .. note::
 
     On Linux or macOS, you can write a period “ . ” instead of “source”, to activate a venv, as a shortcut.

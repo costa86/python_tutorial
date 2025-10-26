@@ -432,70 +432,88 @@ Dataclasses
 --------------
 
 Here's another alternative that also provides more simplicity than a regular class:
-___________________________________________________________________
-from dataclasses import dataclass
 
-@dataclass 
-class Employee:
-    	name: str
-    	salary: float = 1000.0
-    	company: str = "Dunder Mifflin"
+.. code-block:: python
+   :linenos:
 
-   	def promote(self, amount: float) -> float: 
-        	self.salary += amount
-        	return self.salary
+    from dataclasses import dataclass
 
-employee_1 = Employee("Phyllis") 
-employee_1.promote(500)
+    @dataclass 
+    class Employee:
+        name: str
+        salary: float = 1000.0
+        company: str = "Dunder Mifflin"
 
-print(employee_1.salary) #=> 1500.0
-___________________________________________________________________
+        def promote(self, amount: float) -> float: 
+            self.salary += amount
+            return self.salary
 
+    employee_1 = Employee("Phyllis") 
+    employee_1.promote(500)
+
+    print(employee_1.salary) #=> 1500.0
+    
 Notes:
 
-from dataclasses import dataclass
+``from dataclasses import dataclass``
 
-Here I am bringing dataclass to the scope of the program, so I can use it. This is a concept better explained in the Modules chapter.
+Here I am bringing ``dataclass`` to the scope of the program, so I can use it. This is a concept better explained in the Modules chapter.
 
-@dataclass
+``@dataclass``
 
-This is a concept demonstrated in the Decorators chapter. For the moment, keep in mind that it is required, and it needs to be exactly in the line above the class deﬁnition!
+This is a concept demonstrated in the Decorators chapter. For the moment, keep in mind that it is required, 
+and it needs to be exactly in the line above the class deﬁnition!
 
-As you can see, no constructor is required in a dataclass class type! You can simply write the attributes inside the class. The remaining features are pretty much the same as seen in regular classes.
+As you can see, no constructor is required in a dataclass class type! You can simply write the attributes inside the class. 
+The remaining features are pretty much the same as seen in regular classes.
 
-Overall, dataclasses are an alternative with less boilerplate to write than regular classes, also providing type annotations for the attributes. The possible downside here is that regular classes provide more advanced and granular customizations. If this is not an issue to you, then dataclass may be a good ﬁt for your program!
+Overall, dataclasses are an alternative with less boilerplate to write than regular classes, also providing type annotations for the attributes. 
+The possible downside here is that regular classes provide more advanced and granular customizations. 
+If this is not an issue to you, then dataclass may be a good ﬁt for your program!
+
 Pydantic
+---------------
 
-Unlike the previous approaches, this one requires the installation of a third-party library called "Pydantic". Learn more about installing these libraries in the Virtual environment chapter.
+Unlike the previous approaches, this one requires the installation of a third-party library called "Pydantic". 
+Learn more about installing these libraries in the Virtual environment chapter.
 
-NOTE: Personally, I ﬁnd this library to be the best choice for classes in professional projects, since it provides sophisticated mechanisms for data type validation and many other useful customizations. Besides that, it's a library with a high focus on performance, becoming faster at each new version update.
+.. note::
 
-WARNING: The following demonstration assumes you are in an activated venv containing the pydantic library installed.
+    Personally, I ﬁnd this library to be the best choice for classes in professional projects, since it provides sophisticated mechanisms for data type 
+    validation and many other useful customizations. Besides that, it's a library with a high focus on performance, becoming faster at each new version update.
+
+
+.. warning::
+
+    The following demonstration assumes you are in an activated venv containing the pydantic library installed.
 
 Let's rewrite the Employee class using the Pydantic library:
-___________________________________________________________________
-from pydantic import BaseModel 
-from typing import Literal
 
-class Employee(BaseModel): 
-    	name: str
-    	salary: float = 0.0
-    	branch: Literal["scranton", "buffalo", "stamford", "utica"] 
+.. code-block:: python
+   :linenos:
 
-employee_1 = Employee(name="creed",branch="scranton", salary=1000.0) 
+    from pydantic import BaseModel 
+    from typing import Literal
 
-print(employee_1) # => name='creed' salary=1000.0 branch='scranton'
-___________________________________________________________________
+    class Employee(BaseModel): 
+        name: str
+        salary: float = 0.0
+        branch: Literal["scranton", "buffalo", "stamford", "utica"] 
+
+    employee_1 = Employee(name="creed",branch="scranton", salary=1000.0) 
+
+    print(employee_1) # => name='creed' salary=1000.0 branch='scranton'
 
 
 How it works:
 
-from pydantic import BaseModel and from typing import Literal
+``from pydantic import BaseModel and from typing import Literal``
 
-Here I am bringing BaseModel and Literal to the scope of the program, so I can use it. This is a concept better explained in the Modules chapter.
+Here I am bringing ``BaseModel`` and ``Literal`` to the scope of the program, so I can use it. This is a concept better explained in the Modules chapter.
 
-branch: Literal["scranton", "buffalo", "stamford", "utica"]
+``branch: Literal["scranton", "buffalo", "stamford", "utica"]``
 
-This means that the instances of the Employee class must take one of these values as branch: "scranton", "buﬀalo", "stamford", "utica". If you try to set any other value, it will not be accepted!
+This means that the instances of the ``Employee`` class **must** take one of these values as branch: "scranton", "buﬀalo", "stamford", "utica". 
+If you try to set any other value, it will not be accepted!
 
 In order to learn more about all the features of Pydantic, check out its oﬃcial documentation at https://docs.pydantic.dev/latest/.	

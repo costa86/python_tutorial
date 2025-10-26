@@ -65,3 +65,4 @@ Contents
    datetime
    decorators
    errors
+   delete

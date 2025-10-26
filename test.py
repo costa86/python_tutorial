@@ -1,18 +1,25 @@
-def count_binary_substrings(s):
-    groups = []
-    count = 1
+def get_triangle_type(side_1: int, side_2: int, side_3: int) -> str:
 
-    for i in range(1, len(s)):
-        
-        if s[i] == s[i - 1]:
-            count += 1
-            continue
-        
-        groups.append(count)
-        count = 1
+    # PART 1
+    invalid_case_a = (side_1 + side_2) <= side_3
+    invalid_case_b = (side_2 + side_3) <= side_1
+    invalid_case_c = (side_3 + side_1) <= side_2
+
+    if invalid_case_a or invalid_case_b or invalid_case_c:
+        return "invalid"
+
+    # PART 2
+    all_sides_equal = side_1 == side_2 == side_3
+    two_sides_equal = (side_1 == side_2) or (side_1 == side_3)
     
-    groups.append(count)
-    return groups
+    return (
+        "equilateral"
+        if all_sides_equal
+        else "isosceles" if two_sides_equal else "scalene"
+    )
 
-a = count_binary_substrings("00110")
-print(a)
+
+print(get_triangle_type(6, 3, 2))  # => invalid
+print(get_triangle_type(5, 4, 3))  # => scalene
+print(get_triangle_type(4, 4, 4))  # => equilateral
+print(get_triangle_type(4, 4, 3))  # => isosceles

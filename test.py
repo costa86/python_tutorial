@@ -1,12 +1,22 @@
-attempts = 3
-counter = 1
+def get_employees_by_department(department: str) -> list:
 
-while counter <= attempts:
-    print(f"Attempt {counter}/{attempts}")
-    employee_name = input("Employee name: ")
+    match department.lower():
 
-    if employee_name.lower() == "michael":
-        print("Hello, world's best boss!")
-        break
+        case "sales":
+            return ["jim", "dwight", "phyllis", "stanley"]
 
-    counter += 1
+        case "accounting":
+            return ["angela", "oscar", "kevin"]
+
+        case "human resources" | "human_resources":  # either one
+            return ["toby"]
+
+        case "reception":
+            return ["pam"]
+
+        return []
+
+
+print(get_employees_by_department("human_resources"))  # => ['toby']
+print(get_employees_by_department("ccounting"))  # => ['angela', 'oscar', 'kevin']
+print(get_employees_by_department("management"))  # => []

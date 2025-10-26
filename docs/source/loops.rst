@@ -215,5 +215,5 @@ In this case, the name will be skipped, and the iteration will move up to the ne
 
 .. note::
 
-    In a way, both continue and break are similar in their nature. While ``break`` exits the whole loop, ``continue`` exits only the current element in the loop. 
+    In a way, both ``continue`` and ``break`` are similar in their nature. While ``break`` exits the whole loop, ``continue`` exits only the current element in the loop. 
     Also, both can be used in ``for`` and ``while`` loops.

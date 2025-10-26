@@ -79,3 +79,33 @@ As a result, what matters here is that the keys in ``employee`` have an exact ma
 
 In other words, ``employee["name"]`` gets mapped to ``name``, ``employee["gender"]`` to ``gender``, and ``employee["age"]`` to ``age``, 
 regardless of their position in the dict!
+
+Dummy variable
+---------------
+
+Say you are deconstructing a structure, such as a tuple with 3 elements, but you don't need all of them. In the following example, I don't need the second element (46):
+
+.. code-block:: python
+   :linenos:
+
+    name, _, male = ("michael", 46, True)
+    print(name, male)
+
+As mentioned, I don't need this second element, so I don't want to assign a variable to it.
+To address this situation, this "_" is commonly known as a dummy/throwaway variable. 
+It's used to signal a value that is not going to be used, but it's a placeholder for an actual value (46, in this case).
+
+It can be used with functions too:
+
+.. code-block:: python
+   :linenos:
+
+    def get_info() -> tuple:
+        return ("michael", 46)
+
+
+    _, age = get_info()
+    print(age) #=> 46
+
+
+Above, ``get_info()`` returns a tuple with two elements, but I just want the second one.

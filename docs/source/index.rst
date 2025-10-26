@@ -64,3 +64,4 @@ Contents
    modules
    datetime
    decorators
+   errors

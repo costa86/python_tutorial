@@ -1,15 +1,9 @@
-def print_start_and_end(func):
-    def wrapper():
-        print("---START---")
-        func()
-        print("---END---")
-
-    return wrapper
-
-
-@print_start_and_end
-def introduce():
-    print("I am Michael")
+def test():
+    try:
+        1 / 0
+    except ZeroDivisionError:
+        pass  # be carefull with that!
+    print("test")
 
 
-introduce()
+test()

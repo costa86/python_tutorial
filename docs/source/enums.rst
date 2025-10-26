@@ -4,6 +4,7 @@ Enum
 
 This concept assumes you have read the Classes chapter.
 Short for "enumeration", it's a structure useful for situations where you wish to set diﬀerent possibilities of the same entity.
+
 As an analogy, each employee at a company has a job position. This job position can be one out of multiple possibilities, 
 such as salesperson, regional manager, accountant, and so on. Let's call these possibilities "variations".
 

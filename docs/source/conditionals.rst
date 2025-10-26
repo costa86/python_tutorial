@@ -135,10 +135,12 @@ let's implement its solution as a function that uses a ternary to validate the p
 Now let's go over the implementation details:
 
 ``PART 1``
+
 The ﬁrst thing to do is ensure the sides are valid. After all, there's no point in checking the triangle type if their sides cannot form a triangle in the ﬁrst place...
 So we perform this validation ﬁrst. If the sides are not valid, we exit the function by returning "invalid".
 
 ``PART 2``
+
 Here's the fun part. Notice that the validation works as a cascade, where each validation only takes place if the previous one is ``False``. 
 First, it attempts to return "equilateral", but only if ``side_1 == side_2 == side_3``, if this is ``False``, then it tries to return "isosceles", 
 but only if ``side_1 == side_2 or side_1 == side_3``. If this is also ``False``, then it returns "scalene", which works here as a fallback (default) value.
@@ -175,13 +177,16 @@ It should receive the person’s age as a parameter, and return ``True`` if they
         return age >= 18
 
 ``can_drive_v1``
-This is what we would call a “naive” approach. The classic structure of the ``if-elif-else`` statements “train” us to think that we **must** add this ``else``, 
-because there’s another condition to be verified (``age`` not being >= 18).
+
+This is what we would call a “naive” approach. The classic structure of the ``if-elif-else`` statements “trains” us to think that we **must** add this ``else``, 
+because there’s another condition to be verified (``age`` not being >= 18)...
 
 ``can_drive_v2``
+
 That’s why it’s important to understand what ``return`` does. The function returns ``False`` by default, but if ``age >= 18``, it returns ``True``.
 
 ``can_drive_v3``
+
 Here’s an example of how helpful a boolean can be (see more in the Boolean logic chapter). The validation of ``age >= 18`` is, itself, a boolean. So we simply return it.
 
 The main reason why you should avoid using ``else`` in functions is clarity. See for yourself, it takes less cognitive effort and time to understand what ``can_drive_v3`` 
@@ -190,25 +195,32 @@ does, compared to the other two ones.
 Dict as an alternative to conditionals
 -----------------------------------
 
-If you have 3+ conditionals, a dict (covered in the Dictionaries chapter) can be another interesting alternative to an if-elif-else conditional:
-___________________________________________________________________
-def get_employees_by_department(department: str) -> list[str]:
-	department_map = {
-    		"sales": ["jim", "dwight", "phyllis", "stanley", "andy"],
-    		"human resources": ["toby"],
-    		"accounting": ["oscar", "angela", "kevin"],
-	}
-	try:
-    		return department_map[department]
-	except KeyError:
-    		return []
+If you have 3+ conditionals, a dict (covered in the Dictionaries chapter) can be another interesting replacement to an ``if-elif-else`` conditional:
 
-print(get_employees_by_department("accounting"))
-# => ["oscar", "angela", "kevin"]
-print(get_employees_by_department("management"))  # => []
-___________________________________________________________________
+.. code-block:: python
+   :linenos:
 
-In this example, the keys (department names) in department_map are roughly the equivalent to if-elif conditionals. If the department parameter is found in department_map, then its respective value (a list with people in the department) gets returned. But if it’s not found, then an empty list is returned. Wish to add a new “condition”? Just add a new key: value pair (department name and list of people, respectively) to department_map! 
+    def get_employees_by_department(department: str) -> list[str]:
+        department_map = {
+            "sales": ["jim", "dwight", "phyllis", "stanley", "andy"],
+            "human resources": ["toby"],
+            "accounting": ["oscar", "angela", "kevin"],
+        }
+        try:
+            return department_map[department]
+        except KeyError:
+            return []
 
-INFO: The try and except keywords are covered in the Error/exception handling chapter. For now, keep in mind that if the department parameter is not a key in department_map, then an empty list is returned.
+    print(get_employees_by_department("accounting")) # => ["oscar", "angela", "kevin"]
+    print(get_employees_by_department("management")) # => []
+
+
+In this example, the keys (representing department names) in ``department_map`` are roughly the equivalent to ``if-elif`` conditionals. 
+If the ``department`` parameter is found in ``department_map``, then its respective value (a list with people in that department) gets returned. 
+But if it’s not found, then an empty list is returned. Wish to add a new “condition”? Just add a new key: value pair 
+(department name and list of people, respectively) to ``department_map``! 
+
+.. note::
+    The ``try`` and ``except`` keywords are covered in the Error/exception handling chapter. 
+    For now, keep in mind that if the ``department`` parameter is not a key in ``department_map``, then an empty list is returned.
 

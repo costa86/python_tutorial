@@ -1,36 +1,11 @@
-class Employee:
-    def __init__(self):
-        self.company = "Dunder Mifflin"
-        self.salary = 0.0
-
-    def promote(self, salary_raise: float) -> float:
-        self.salary += salary_raise
-        return self.salary
+from enum import Enum
 
 
-class Singer:
-    def __init__(self):
-        self.instrument = "Banjo"
+class JobPosition(Enum):  # An enum is a class
+    SALESPERSON = "salesperson"
+    REGIONAL_MANAGER = "regional manager"
+    ACCOUNTANT = "accountant"
 
 
-class SalesPerson(Employee, Singer):
-    def __init__(self):
-        Employee.__init__(self)
-        Singer.__init__(self)
-
-
-sales_person = SalesPerson()
-
-all_available = dir(sales_person)
-
-all_properties = vars(sales_person)
-
-all_custom_methods = [
-    i
-    for i in dir(sales_person)
-    if callable(getattr(sales_person, i)) and not i.startswith("__")
-]
-
-print("Everything available: ", all_available)
-print("All the properties: ", all_properties)
-print("All the custom methods: ", all_custom_methods)
+introduction = f"Kevin is an {JobPosition.ACCOUNTANT.value}"
+print(introduction)  # => Kevin is an accountant

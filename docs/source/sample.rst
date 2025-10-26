@@ -11,6 +11,18 @@ For example:
 ['shells', 'gorgonzola', 'parsley']
 
 
+
+.. code-block:: rst
+
+      f(x) = x + 2 
+
+      Where:
+
+      f: the name of the function
+      x: the input
+      x + 2: the output
+
+
 * dwedwe
 * dewdew
 

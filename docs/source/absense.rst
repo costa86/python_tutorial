@@ -43,3 +43,7 @@ In both previous functions, if the ``name`` argument is passed, then ``name`` it
             pass
 
         print(return_none()) => None
+
+.. note::
+
+    A fun fact about ``None`` is that it is a `Singleton <https://en.wikipedia.org/wiki/Singleton_pattern>`_ object in Python. You'll see more about objects in the Classes chapter.

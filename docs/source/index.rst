@@ -60,3 +60,4 @@ Contents
    absense
    venv
    classes
+   enums

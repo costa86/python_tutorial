@@ -32,9 +32,11 @@ Let's hop into some Python examples:
 
 
 In this example we are using the ``if`` and ``else`` keywords as a decision tree about a discount to be applied. 
-In other words: if ``ream_paper_pric``e is greater than 10.0, then ``percent_discount`` is 20.0. Otherwise (that's what ``else`` means), ``percent_discount`` is 10.0. 
-In our case the condition is ``True`` (40.0 > 10.0), so ``percent_discount`` is 20.0. 
+In other words: if ``ream_paper_price`` is greater than 10.0, then ``percent_discount`` is 20.0. Otherwise (that's what ``else`` means), ``percent_discount`` is 10.0. 
+
+In our case, the condition is ``True`` (40.0 > 10.0), so ``percent_discount`` is 20.0. 
 The remaining part is a pure mathematical operation to get the ﬁnal price with the discount applied.
+
 But what if the decision tree requires more than two possibilities? That's where the ``elif`` keyword comes in:
 
 .. code-block:: python
@@ -60,8 +62,8 @@ In this example, there are three possibilities that will inﬂuence both ``bonus
 - Possibility “A”: if >= 1000.0, then ``bonus`` is 100.0
 - Possibility “B”: if >= 500.0. Here we used the ``elif`` keyword, which roughly translates into “otherwise, if…”, then ``bonus`` is 50.0.
 - Possibility “C”: if none of these 2 previous possibilities  are met, we use what is stated by the ``else`` keyword, that is the equivalent to saying "otherwise…", 
-then there’s no bonus variable. That's the reason I didn't need to explicitly write ``elif sales < 500.0``, for instance, 
-because this conclusion is already implicit. In other words, this possibility works as a fallback/default scenario
+  then there’s no bonus variable. That's the reason I didn't need to explicitly write ``elif sales < 500.0``, for instance, 
+  because this conclusion is already implicit. In other words, this possibility works as a fallback/default scenario
 
 .. note::
 

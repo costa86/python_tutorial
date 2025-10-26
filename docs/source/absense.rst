@@ -1,0 +1,34 @@
+============
+Absense of a value
+============
+Many programming languages provide a way to represent the idea of lack or absence of a value. Many of them adopt the word “null" for that. But in Python, we use the None keyword:
+___________________________________________________________________
+print(None) # => None
+___________________________________________________________________
+
+
+None can also be used as a conditional. See some examples:
+___________________________________________________________________
+def get_name(name: str | None) -> str: 
+    	if not name:
+        	return "NAME IS ABSENT" 
+    	return name
+
+# A shorter alternative version
+def get_name_v2(name: str | None) -> str: 
+    	return name or "NAME IS ABSENT"
+
+print(get_name("michael")) # => michael 
+print(get_name(None)) # => NAME IS ABSENT 
+print(get_name_v2("jan")) # => jan 
+print(get_name_v2(None)) # => NAME IS ABSENT
+___________________________________________________________________
+
+In both previous functions, if the name argument is passed, then name itself is returned. But if None is passed, then "NAME IS ABSENT" is returned.
+
+INFO: if you remember from the Functions chapter, None is implicitly returned in a function that apparently does not return anything. See this example:
+___________________________________________________________________
+def return_none():
+	pass
+
+print(return_none()) => None

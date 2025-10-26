@@ -27,7 +27,7 @@ This command is expected to have created a folder named "myenv". I suggest you c
 
 In order to start working with the "myenv" venv, it needs to be activated. Do it via command line:
 
-Linux | macOS
+Linux or macOS
 
 .. code-block:: console
     
@@ -43,7 +43,7 @@ Windows
 
 .. note::
 
-    On Linux / macOS, you can write a period “ . ” instead of “source”, to activate a venv, as a shortcut.
+    On Linux or macOS, you can write a period “ . ” instead of “source”, to activate a venv, as a shortcut.
 
 If the activation worked, you should see "(myenv)" at the beginning of your terminal, as such:
 

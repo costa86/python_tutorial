@@ -59,3 +59,4 @@ Contents
    match   
    absense
    venv
+   classes

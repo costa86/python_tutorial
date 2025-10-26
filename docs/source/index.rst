@@ -53,4 +53,5 @@ Contents
    sets
    boolean
    operators
-   conditionals   
+   conditionals
+   deconstructing   

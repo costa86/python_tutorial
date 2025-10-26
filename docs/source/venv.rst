@@ -84,7 +84,6 @@ Then you should see something similar to this as an output:
     pydantic	                  1.10.7
     setuptools	                  65.5.0
     typing_extensions             4.5.0
-    wcwidth	                      0.2.6
 ___________________________________________________________________
 
 Notice that "pydantic" version 1.10.7 is installed. The notion of "library version" is another reason to justify the usage of a venv, 

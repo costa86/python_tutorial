@@ -9,6 +9,8 @@ Let's see some examples:
 .. code-block:: python
    :linenos:
 
+    # Imagine that today is 2024-may-07
+
     # 1. Current date and time
     current_datetime = datetime.datetime.now() 
     print(current_datetime) # => 2024-05-07 19:31:55.594238

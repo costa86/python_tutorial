@@ -27,18 +27,21 @@ This command is expected to have created a folder named "myenv". I suggest you c
 
 In order to start working with the "myenv" venv, it needs to be activated. Do it via command line:
 
-Linux or macOS
 
-.. code-block:: console
-    
-    source myenv/bin/activate 
+.. tabs::
 
+   .. tab:: Linux or macOS
 
-Windows
+    .. code-block:: console
+        
+        source myenv/bin/activate 
 
-.. code-block:: console
-    
-    source myenv\Scripts\activate.bat 
+   .. tab:: Windows
+
+    .. code-block:: console
+        
+        source myenv\Scripts\activate.bat 
+
 
 
 .. note::

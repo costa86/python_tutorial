@@ -1,9 +1,6 @@
-def test():
-    try:
-        1 / 0
-    except ZeroDivisionError:
-        pass  # be carefull with that!
-    print("test")
+from functools import reduce
 
+a = [1, 2, 3]
 
-test()
+b = reduce(lambda a, b: a + b, a)
+print(b)

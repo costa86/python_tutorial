@@ -66,3 +66,4 @@ Contents
    decorators
    errors
    delete
+   generators

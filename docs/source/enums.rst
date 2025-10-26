@@ -21,10 +21,10 @@ Let's see an example to make it clear:
 		REGIONAL_MANAGER = "regional manager"
 		ACCOUNTANT = "accountant"
 
+
 	introduction = f"Kevin is an {JobPosition.ACCOUNTANT.value}"
 
 	print(introduction) # => Kevin is an accountant
-
 
 Let's go over some details:
 

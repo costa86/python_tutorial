@@ -48,7 +48,7 @@ Output:
 Notice that the ``employees`` has only three elements, so their valid indexes are only 0, 1 and 2. Since Python cannot reach index 3, the program crashes. 
 But now the exception has a diﬀerent type: ``IndexError``.
 
-Visit this website to see all the built-in Python exception types: https://docs.python.org/3/library/exceptions.html. 
+Check out all the built-in Python exception types: https://docs.python.org/3/library/exceptions.html. 
 
 In many cases, having the whole program crash whenever an exception happens is not very convenient… 
 That's why Python provides features for handling exceptions, so that the program can "recover" itself and keep its execution ﬂow, instead of crashing. 
@@ -92,17 +92,18 @@ since these are valid indexes.
 A new keyword here: ``except``. This is where the exception handling takes place. 
 Here I am saying that if an exception of type ``IndexError`` happens (which is the case here, since index is set to 3), 
 then the program will ``print()`` a message: "Index 3 is not valid: list index out of range". But it continues to work instead of crashing!
+
 A very important detail here is that I am being explicit about the exception type I want to handle: ``IndexError``. 
-If any other type of exception happens instead, the program crashes... A "safer" alternative would be using the ``Exception`` type instead of ``IndexError``. 
+If any other type of exception happens instead, then the program crashes... A "safer" alternative would be using the ``Exception`` type instead of ``IndexError``. 
 This is because ``Exception`` is a parent class of ``IndexError``, so another error type would certainly be caught as well.
 
 .. note::
 
     In certain situations, you may want to handle diﬀerent exception types in speciﬁc ways, so that's the reason Python provides this ﬂexibility of either targeting a speciﬁc exception type, or using a more generic one such as Exception. Also note that the reference to the exception inside the printed string is made via this e variable. By stating "except IndexError as e", I am setting a variable called "e" as an alias to IndexError. The concept of aliasing is explained in the Modules chapter.
 
-``ﬁnally``
+``finally``
 
-This part is optional. The block of code delimited by the ``ﬁnally`` keyword gets executed if both cases: whether the ``try`` block works or an exception happens. 
+This part is optional. The block of code delimited by the ``finally`` keyword gets executed if both cases: whether the ``try`` block works or an exception happens. 
 It's like saying: "regardless of what happens, run this piece of code".
 
 Pass

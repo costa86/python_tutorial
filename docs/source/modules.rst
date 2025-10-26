@@ -75,6 +75,7 @@ to ``employees_list`` is made by referring to ``el`` instead. This is known as "
 ``MODE 3``
 
 Here I am importing all the variables, classes and functions that are inside the ``/info/sales.py`` ﬁle, not just the ``employees_list`` variable.
+Notice the "*" being used.
 
 .. note::
 

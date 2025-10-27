@@ -8,6 +8,7 @@ Asynchronous functions
    :align: center
 
 
+
 This concept assumes you have read Functions, Loops, Lists, and Modules chapters.
 Async functions in Python, also known as asynchronous functions, are a way of performing tasks concurrently without blocking the execution of other tasks.
 

@@ -49,15 +49,15 @@ This is very handy to turn a collection of names into alphabetical order, for in
     ``sorted()`` returns a list. Keep that in mind in case you are sorting a set or a tuple:
 
     .. code-block:: python
-    :linenos:
+        :linenos:
 
-    names_set = {"Jim", "Pam", "Angela"}
-    numbers_tuple = (2, 1, 3)
+        names_set = {"Jim", "Pam", "Angela"}
+        numbers_tuple = (2, 1, 3)
 
-    names_set_sorted = sorted(names_set)
-    numbers_tuple_sorted_reverse = sorted(numbers_tuple, reverse=True)
+        names_set_sorted = sorted(names_set)
+        numbers_tuple_sorted_reverse = sorted(numbers_tuple, reverse=True)
 
-    print(type(names_set_sorted)) #=> <class 'list'>
-    print(names_set_sorted) #=> ['Angela', 'Jim', 'Pam']
-    print(type(numbers_tuple_sorted_reverse)) #=> <class 'list'>
-    print(numbers_tuple_sorted_reverse) #=> [3, 2, 1]
+        print(type(names_set_sorted)) #=> <class 'list'>
+        print(names_set_sorted) #=> ['Angela', 'Jim', 'Pam']
+        print(type(numbers_tuple_sorted_reverse)) #=> <class 'list'>
+        print(numbers_tuple_sorted_reverse) #=> [3, 2, 1]

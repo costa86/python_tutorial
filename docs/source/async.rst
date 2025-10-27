@@ -2,6 +2,12 @@
 Asynchronous functions
 ========================
 
+.. image:: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGV3ZzNlOXJoMXRhZTY1ZDB2dnFhZmExYWZxeDVpZXRtbWF5ZmdqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k6r6lTYIL9j9ZeRT51/giphy.gif
+   :alt: Description of the animation
+   :width: 400px
+   :align: center
+
+
 This concept assumes you have read Functions, Loops, Lists, and Modules chapters.
 Async functions in Python, also known as asynchronous functions, are a way of performing tasks concurrently without blocking the execution of other tasks.
 
@@ -58,7 +64,8 @@ To trigger the tasks, the ``asyncio.run()`` function is called with the ``main()
 
 Both tasks will be executed concurrently, allowing the program to perform the other task without waiting for the pseudo-download task to ﬁnish. 
 Try running the program multiple times and you will see that order of the outputs will vary, which demonstrates the asynchronous capability of the ``asyncio`` library. 
-It’s also worth mentioning that ``random.randint(x, y)`` is a function that returns a random integer between x-y each time it’s called. 
+
+It’s also worth mentioning that ``random.randint(x, y)`` is a function that returns a random integer between **x-y** each time it’s called. 
 We used it in both tasks to simulate the execution time of each one.
 
 The ``await`` keyword signals something that will be waiting to be ﬁnished before the program continues its execution. 

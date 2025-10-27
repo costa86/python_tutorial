@@ -14,6 +14,20 @@ The two possible values for a boolean are ``True`` or ``False``.
    :align: center
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .. code-block:: python
    :linenos:
 

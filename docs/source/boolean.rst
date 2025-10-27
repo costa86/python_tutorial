@@ -11,6 +11,7 @@ The two possible values for a boolean are ``True`` or ``False``.
 .. image:: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmpzcnNscGQ3YXUyeTU1Y28wcHBrZTQxYWttanpxd2R6M2lqdTNqYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dXFKDUolyLLi8gq6Cl/giphy.gif
    :alt: Description of the animation
    :align: center
+   :loading: embed
                                                     
                                                                               
 .. code-block:: python

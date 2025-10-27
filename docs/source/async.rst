@@ -8,7 +8,6 @@ Async functions in Python, also known as asynchronous functions, are a way of pe
 .. image:: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGV3ZzNlOXJoMXRhZTY1ZDB2dnFhZmExYWZxeDVpZXRtbWF5ZmdqMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k6r6lTYIL9j9ZeRT51/giphy.gif
    :alt: Description of the animation
    :align: center
-   :loading: lazy
 
 
 As an example, we will simulate downloading something from the web, since this is a task that in reality might take a while to be ﬁnished, 

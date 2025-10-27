@@ -8,6 +8,8 @@ In Python, numbers can be represented as three diﬀerent types:
    :alt: Description of the animation
    :align: center
 
+---------------------
+
 Int
 -----------
 

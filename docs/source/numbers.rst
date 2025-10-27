@@ -4,6 +4,11 @@ Numbers
 
 In Python, numbers can be represented as three diﬀerent types:
 
+.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3JjdWdjODcxdzNhYTZnY3RmNTNqeGdicHlkZGV6Y3NmNG85Zm1lZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SEWEmCymjv8XDbsb8I/giphy.gif
+   :alt: Description of the animation
+   :width: 400px
+   :align: center
+
 Int
 -----------
 

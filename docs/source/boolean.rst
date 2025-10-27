@@ -12,22 +12,8 @@ The two possible values for a boolean are ``True`` or ``False``.
    :alt: Description of the animation
    :width: 400px
    :align: center
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                    
+                                                                              
 .. code-block:: python
    :linenos:
 

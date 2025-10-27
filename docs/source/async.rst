@@ -10,9 +10,7 @@ Async functions in Python, also known as asynchronous functions, are a way of pe
    :width: 400px
    :align: center
 
-
-
-
+-------------------------
 As an example, we will simulate downloading something from the web, since this is a task that in reality might take a while to be ﬁnished, 
 depending on the internet speed and other circumstances. And at the same time, perform a second task, without having to wait for the ﬁrst task to be ﬁnished. 
 We will use the ``asyncio`` built-in library for that.

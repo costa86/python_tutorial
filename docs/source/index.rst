@@ -68,3 +68,4 @@ Contents
    delete
    generators
    builtin
+   async

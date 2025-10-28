@@ -4,6 +4,12 @@ Absense of a value
 Many programming languages provide a way to represent the idea of lack or absence of a value. 
 Many of them adopt the word “null" for that. But in Python, we use the ``None`` keyword:
 
+.. image:: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Z1cjA0MzNzeDd5YzBzdHhuM2dxZG5reXUxMXBwMWJtNGF6aWhwNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dTVWlxS6YXBRvcjT1E/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
 .. code-block:: python
    :linenos:
 

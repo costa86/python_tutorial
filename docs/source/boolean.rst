@@ -69,3 +69,10 @@ Where it returns ``True`` if ``name`` is equals to (==) "michael". Otherwise, it
 .. note::
 
     A fun fact about ``True`` and ``False`` is that they are a `Singletons <https://en.wikipedia.org/wiki/Singleton_pattern>`_ objects in Python. You'll see more about objects in the Classes chapter.
+
+
+.. image:: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZoYzcxMTR5cXcwOXRib3Z2MWRpaWJqb2F4Zm05MDljNmV2a21ociZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BbzOAkepyC1yUbzlWd/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------

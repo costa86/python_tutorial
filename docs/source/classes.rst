@@ -120,6 +120,13 @@ In biology, it means the passing of traits from one generation to the next throu
 As a very basic example, If a woman has blue eyes and she gives birth to a boy with blue eyes too, one may say that the boy inherited his eye color from his mother.
 In classes, "inheritance" is a way of mimicking this same concept.
 
+.. image:: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWR5Nnd2cGU2dmtrdDZud2d2eW82ZjdmNWt4anpkbjI5dGdyejZ2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aVIyLrzACDKVEoRUu9/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
+
 If a company has employees, and some of them are salespeople, these salespeople are employees too, right? 
 In this situation, it makes sense to represent this idea with a new class ``SalesPerson`` (child), that would inherit from the ``Employee`` (parent) class we 
 already created. The immediate beneﬁt here is that we don't have to rewrite the attributes ``name``, ``salary`` and ``company`` for ``SalesPerson``, 
@@ -355,6 +362,13 @@ You may have noticed an extra ``SchruteFarmsSalesPerson`` class too. Dwight, hap
 Based on the concepts we just learned about multiple inheritance, we could simply add ``SchruteFarmsSalesPerson`` as a parent class to ``DundlerMifflinSalesPerson`` too, 
 so that dwight would inherit the ``beets`` property. Problem solved, right?
 
+.. image:: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDY0bDQ3cWZzYnM0Nnhka2NvcWd1OTl3a3FiMTJmYjFvdzFxaDdwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/etQm5iUnw2wfDct36j/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
+
 The issue is that if we do this, not only dwight, but all other instances of ``DundlerMifflinSalesPerson``, including ``jim``, would inherit ``beets`` too, 
 which would not be accurate, since only Dwight sells beets…
 
@@ -412,6 +426,13 @@ See that ``jim`` and ``dwight`` sell different products now, even though they ar
 This isolation of classes using the composition approach tends to make even more sense as the program grows. 
 Suppose that now we have to develop a program to manage the warehouse where Dunder Mifflin stores its products. 
 Well, we just created a ``Product`` class, that way we can reuse it in this new warehouse program!
+
+.. image:: https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXQycW8zNTZrMmloeGNuY3VkeTdxajB0cGxqYTY0MnBhdHZxemtmbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DOoxEdozTh4DSjKWs0/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
   
 Alternatives to regular classes
 --------------------------

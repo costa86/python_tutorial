@@ -175,9 +175,16 @@ Now, modify the program again. This time, using the generated sequence version:
 
 As a result, we see that obtaining ``sum_large_seq_gen`` used  **0.0 MiB!** 
 The reason for this significant difference is that in the generated version, each value in the sequence was incremented individually to generate the final value, 
-whereas in the first sequenced list version, a whole list of 100.000 numbers was created in memory! 
+whereas in the first sequenced list version, a whole list of 100.000 numbers was created in memory!
+
 You may argue that **2.36328125 MiB** vs **0.0 Mib** doesn’t make much difference, but in other scenarios, 
 this subtle detail may drastically influence the speed/performance of a program!
+
+.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXo5dHN1OWJoNXhoYzU3dW02dDM5b2FqaWt3czRyb3l0M2N4NmgwMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SW3PNayoSGXao/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
 
 Built-in generator functions
 ------------------------------

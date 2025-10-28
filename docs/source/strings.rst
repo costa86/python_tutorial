@@ -77,6 +77,7 @@ An interesting use case for strings is being able to replicate it multiple times
    :alt: Description of the animation
    :align: center
 
+-------------------------
 
 .. code-block:: python
    :linenos:

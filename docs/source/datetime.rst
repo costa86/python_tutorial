@@ -4,6 +4,12 @@ Dates and time
 
 Handling dates and times in Python can be done using the built-in ``datetime`` module, which contains the classes we will use in this chapter.
 
+.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFpeDR1ZXFzendrcWY5MGJ0YzVyMzh2andxMWZzNDF0aXdmdm9iZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vJQLvFGuihLIiNo52r/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
 Let's see some examples:
 
 .. code-block:: python

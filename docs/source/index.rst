@@ -69,3 +69,5 @@ Contents
    generators
    builtin
    async
+   context
+   testing

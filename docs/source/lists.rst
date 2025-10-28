@@ -4,6 +4,12 @@ Lists
 
 This is one of the most typical ways in Python to store collections of values.
 
+.. image:: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGhtOHdydzlxZHVuZzUxdXZpZ2ZzM2s5NjRlOHJ6bzE1ZXl4MjVxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/x1CTRDahCslouG0RpW/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
 .. code-block:: python
    :linenos:
 

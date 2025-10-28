@@ -115,7 +115,6 @@ Inheritance
 --------------
 
 This is an interesting concept in classes whose name is inspired by the concept of inheritance in biology.
-
 In biology, it means the passing of traits from one generation to the next through their genes. 
 As a very basic example, If a woman has blue eyes and she gives birth to a boy with blue eyes too, one may say that the boy inherited his eye color from his mother.
 In classes, "inheritance" is a way of mimicking this same concept.

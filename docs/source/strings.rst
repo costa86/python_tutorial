@@ -73,12 +73,17 @@ Replicating strings
 
 An interesting use case for strings is being able to replicate it multiple times by using the ``*`` operator, the same one used for multiplying numbers.
 
+.. image:: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGh5dHJqOWtvcmxjZjBoZTFudnp1azFjbG1od21scDMxNmV3YXRzYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VHMuWhPNHPrXgNvEkA/giphy.gif
+   :alt: Description of the animation
+   :align: center
+
+
 .. code-block:: python
    :linenos:
 
-   branch = "Buffalo" 
-   many_times = branch * 3
-   print(many_times) # => "BuffaloBuffaloBuffalo"
+   many_times = "Dwight" * 4
+   print(many_times)  # => DwightDwightDwightDwight
+
 
 Escape sequences
 -----------------

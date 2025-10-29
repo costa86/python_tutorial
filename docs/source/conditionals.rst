@@ -118,8 +118,8 @@ let's implement its solution as a function that uses a ternary to validate the p
 
         # PART 2
         all_sides_equal = side_1 == side_2 == side_3
-        two_sides_equal = (side_1 == side_2) or (side_1 == side_3)
-        
+        two_sides_equal = (side_1 == side_2) or (side_1 == side_3) or (side_2 == side_3)
+
         return (
             "equilateral"
             if all_sides_equal
@@ -142,9 +142,10 @@ So we perform this validation ﬁrst. If the sides are not valid, we exit the fu
 
 ``PART 2``
 
-Here's the fun part. Notice that the validation works as a cascade, where each validation only takes place if the previous one is ``False``. 
-First, it attempts to return "equilateral", but only if ``side_1 == side_2 == side_3``, if this is ``False``, then it tries to return "isosceles", 
-but only if ``side_1 == side_2 or side_1 == side_3``. If this is also ``False``, then it returns "scalene", which works here as a fallback (default) value.
+Here’s the fun part. Notice that the validation works as a cascade, where each validation only takes place if the previous one is ``False``. 
+First, it attempts to return “equilateral”, but only if ``side_1 == side_2 == side_3`` (all sides equal), if this is ``False``, 
+then it tries to return “isosceles”, but only if ``(side_1 == side_2) or (side_1 == side_3) or (side_2 == side_3)``. 
+If this is also ``False``, then it returns “scalene”, which works here as a fallback (default) value.
 
 .. note::
 

@@ -1,46 +1,20 @@
-def get_alphabet_letters(qtd: int = 25, uppercase: bool = True) -> list[str]:
+import argparse
 
-    if qtd <= 0 or qtd > 25:
-        return []
+parser = argparse.ArgumentParser()
 
-    first = "A" if uppercase else "a"
-    second = "B" if uppercase else "b"
-    qtd -= 1
+parser.add_argument(
+    "--branch",
+    help="branch you work at",
+    choices=["scranton", "stanford", "buffalo"],
+)
+parser.add_argument(
+    "--name", help="your name", type=str, required=True, metavar="STRING"
+)
 
-    return [chr(i) for i in range(ord(first), ord(second) + qtd)]
-
-
-import unittest
-
-
-class TestGetAlphabetLetters(unittest.TestCase):
-
-    def test_get_alphabet_letters_uppercase(self):
-        expected = ["A", "B", "C"]
-        result = get_alphabet_letters(3)
-        self.assertEqual(expected, result)
-
-    def test_get_alphabet_letters_lowercase(self):
-        expected = ["a", "b", "c", "d"]
-        result = get_alphabet_letters(4, False)
-        self.assertEqual(expected, result)
-
-    def test_get_alphabet_letters_zero(self):
-        expected = []
-        result = get_alphabet_letters(0)
-        self.assertEqual(expected, result)
-
-    def test_get_alphabet_letters_negative(self):
-        expected = []
-        result = get_alphabet_letters(-5)
-        self.assertEqual(expected, result)
-
-    def test_get_alphabet_letters_exceeds_length(self):
-        expected = []
-        result = get_alphabet_letters(26)
-        self.assertEqual(expected, result)
-
-
-# The condition below is to ensure "unittest.main()" only runs if it's executed in this file itself, and not if it's imported by another file.
-if __name__ == "__main___":
-    unittest.main()  # Run all the tests
+parser.add_argument(
+    "--sales", help="total in sales", type=float, default=0.0, metavar="FLOAT"
+)
+args = parser.parse_args()
+message = f"My name is {args.name}, I work at the {args.branch} branch. \
+My total in sales is {args.sales}"
+print(message)

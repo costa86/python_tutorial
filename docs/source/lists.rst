@@ -13,7 +13,18 @@ This is one of the most typical ways in Python to store collections of values.
 .. code-block:: python
    :linenos:
 
-    winners = ["dwight", "darryl", "angela", "kevin", "phyllis", "toby", "oscar"]
+    winners = [
+        "jim",
+        "dwight",
+        "oscar",
+        "darryl",
+        "andy",
+        "toby",
+        "phyllis",
+        "angela",
+        "kevin",
+    ]
+
     crazy_list = ["banana", 1, True, ["A", "B"], 50.0, {}]
     
 
@@ -31,19 +42,23 @@ So, in the ``winners`` list:
 +---------+-------+---------------+
 | Element | Index | Negative index|
 +=========+=======+===============+
-| dwight  | 0     | -7            |
+| jim  | 0     | -9            |
 +---------+-------+---------------+
-| darryl  | 1     | -6            |
+| dwight  | 1     | -8            |
 +---------+-------+---------------+
-| angela  | 2     | -5            |
+| oscar  | 2     | -7            |
 +---------+-------+---------------+
-| kevin   | 3     | -4            |
+| darryl   | 3     | -6            |
 +---------+-------+---------------+
-| phyllis | 4     | -3            |
+| andy    | 4     | -5            |
 +---------+-------+---------------+
-| toby    | 5     | -2            |
+| toby    | 5     | -4            |
 +---------+-------+---------------+
-| oscar   | 6     | -1            |
+| phyllis   | 6     | -3            |
++---------+-------+---------------+
+| angela   | 7     | -2            |
++---------+-------+---------------+
+| kevin   | 8     | -1            |
 +---------+-------+---------------+
 
 With that in mind, you can access individual elements by referring to their indexes:
@@ -51,11 +66,11 @@ With that in mind, you can access individual elements by referring to their inde
 .. code-block:: python
    :linenos:
 
-    print(winners[0]) # => dwight
-    print(winners[1:4]) # => ['darryl', 'angela', 'kevin']
-    print(winners[-1]) # => oscar
-    print(winners[:3]) # => ['dwight', 'darryl', 'angela']
-    print(winners[4:]) # => ['phyllis', 'toby', 'oscar']
+    print(winners[0])  # => jim
+    print(winners[1:4])  # => ['dwight', 'oscar', 'darryl']
+    print(winners[-1])  # => kevin
+    print(winners[:3])  # => ['jim', 'dwight', 'oscar']
+    print(winners[4:])  # => ['andy', 'toby', 'phyllis', 'angela', 'kevin']
 
 
 A few notes:

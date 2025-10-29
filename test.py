@@ -1,34 +1,17 @@
-from pydantic import BaseModel
+winners = [
+    "jim",
+    "dwight",
+    "oscar",
+    "darryl",
+    "andy",
+    "toby",
+    "phyllis",
+    "angela",
+    "kevin",
+]
 
-
-class Employee(BaseModel):
-    name: str
-    age: int
-
-    def get_info(self) -> str:
-        return f"Employee: {self.name}, Age: {self.age}"
-
-
-class Manager(Employee):
-    branch: str
-
-
-class Singer(BaseModel):
-    genre: str
-
-    def sing(self) -> str:
-        return f"I sing {self.genre} music."
-
-
-class SalesPerson(Employee, Singer):
-    department: str
-
-    def make_sale(self) -> str:
-        return f"{self.name} from {self.department} made a sale."
-
-
-class JuniorSalesPerson(SalesPerson):
-    supervisor: str
-
-    def report_to_supervisor(self) -> None:
-        print(f"{self.name} is reporting to {self.supervisor}.")
+print(winners[0])  # => jim
+print(winners[1:4])  # => ['dwight', 'oscar', 'darryl']
+print(winners[-1])  # => kevin
+print(winners[:3])  # => ['jim', 'dwight', 'oscar']
+print(winners[4:])  # => ['andy', 'toby', 'phyllis', 'angela', 'kevin']

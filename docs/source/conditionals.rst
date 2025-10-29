@@ -91,12 +91,13 @@ A triangle is classiﬁed in three types, accordingly to the length of its sides
 
 Also, the sum of any two sides of a triangle must be greater than the third side. 
 If this condition is not met, then it's not a valid triangle...
-For instance, try to draw a triangle having sides 6cm, 3cm and 2cm. You cannot connect all their ends to form a triangle, right?
+For instance, try to draw a triangle having sides 6cm/in, 3cm/in and 2cm/in. You cannot connect all their ends to form a triangle, right?
 
-.. figure:: triangle.png
-   :scale: 100 %
-   :alt: triangle analogy
-
+.. image:: https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGhraDllb2xiYTd0MHc2N2pyeGVjMTg1dnhsaWV3cjc0dzMxZm42dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PbzwVUojP4d8RcRgK0/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
 
 Now that we have more details about the problem, 
 let's implement its solution as a function that uses a ternary to validate the possibilities and return the correct triangle type:

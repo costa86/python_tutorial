@@ -29,15 +29,16 @@ For the demonstration, we will have two ﬁles:
         if qtd <= 0 or qtd > 25:
             return []
 
-        first = "A" if uppercase else "a"
-        second = "B" if uppercase else "b"
-        qtd -= 1
+        letters = [chr(i) for i in range(ord("a"), ord("z") + 1)]
 
-        return [chr(i) for i in range(ord(first), ord(second) + qtd)]
+        if uppercase:
+            letters = [i.upper() for i in letters]
+
+        return letters[:qtd]
 
 
 
-The ``get_alphabet_letters()`` function returns three diﬀerent possibilities:
+The ``get_alphabet_letters()`` function returns three different possibilities:
 
 1. An empty list. If ``qtd`` is less or equals to 0, or greater than 25.
 2. A list with uppercase letters. If ``uppercase`` is ``True``.

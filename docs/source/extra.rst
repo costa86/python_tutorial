@@ -458,6 +458,10 @@ Quality standards
 Linting 
 ------------------
 
+.. note::
+
+    Now it's a good time to be in an activated Python virtual environment, because you'll install some third-party libraries!
+
 Linting is a concept that exists in many languages, including Python. It’s the process of analyzing and checking a program for potential errors, 
 stylistic inconsistencies and best practices. The purpose of this verification is to ensure quality, readability and maintainability of your programs. 
 In other words, to make them more professional-looking.
@@ -546,10 +550,6 @@ so it’s good to catch it beforehand). See this example:
     branch = "scranton"
     branch = 50
 
-.. note::
-
-    Now is a good time to be in a activated Python virtual environment!
-
 Type-checking this program with Mypy (installed with ``pip install mypy``):
 
 .. code-block:: console
@@ -573,4 +573,71 @@ This is pointing out that I called ``greet_all()`` with a list of integers. It w
 ``main.py:12``
 
 This one is complaining about the ``branch`` variable. I initially set it as a string, but then I assigned the value of 50 (int) to it. 
-This works normally, but does it make sense? Probably not.
+Also works normally, but does it make sense? Probably not...
+
+Generating UML class diagrams 
+------------------------------------
+
+By installing Pylint, you also have access to Pyreverse, which is a tool used to generate UML class diagrams. 
+This is useful for educational and training purposes, as visualizing the relationships between classes as diagrams can help both 
+technical and non-technical stakeholders better understand the project.
+
+.. note::
+
+    **UML - Unified Modeling Language**. It’s a standardized modeling language consisting of different diagram types, used for specifying, 
+    documenting, and visualizing software artifacts.
+
+This concept assumes you’ve read the Classes chapter. Let’s see how Pyreverse works:
+
+
+.. code-block:: python
+   :linenos:
+
+    from pydantic import BaseModel
+
+    class Employee(BaseModel):
+        name: str
+        age: int
+
+        def get_info(self) -> str:
+            return f"Employee: {self.name}, Age: {self.age}"
+
+    class Manager(Employee):
+        branch: str
+
+    class Singer(BaseModel):
+        genre: str
+        
+        def sing(self) -> str:
+            return f"I sing {self.genre} music."
+
+    class SalesPerson(Employee, Singer):
+        department: str
+
+        def make_sale(self) -> str:
+            return f"{self.name} from {self.department} made a sale."
+
+    class JuniorSalesPerson(SalesPerson):
+        supervisor: str
+
+        def report_to_supervisor(self) -> None:
+            print(f"{self.name} is reporting to {self.supervisor}.")
+
+
+.. note::
+
+    I used Pydantic to create the classes as a personal preference. Feel free to use regular classes.
+
+Now run Pyreverse like this:
+
+.. code-block:: console
+
+    $ pyreverse main.py -o png
+
+A new ``classes.png`` file was created in your current directory. If you happen to get error messages about *graphviz*, 
+you have to download and install it first:  https://graphviz.org/. Here’s the generated image:
+
+.. figure:: class.png
+   :scale: 100 %
+   :alt: UML
+

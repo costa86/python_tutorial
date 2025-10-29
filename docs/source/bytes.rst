@@ -51,7 +51,7 @@ You can see the contents of an image file as bytes:
     print(image_bytes[:10])  # => b'\xff\xd8\xff\xe0\x00\x10JFIF'
 
 
-.. image:: https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpianV3NGZ5MjhpbHY0NWZkYnZxeHZjZmF6em81cjM4czNzc2N4dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GfaZNzU42Snz6dlGhN/giphy.gif
+.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHh4OTZpcGh0Y3BlZjFyd3R6Yml0N3ZtZTNrOWh6Y2R2eDM5MmVpOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EBId5v0YNRyPGHytLK/giphy.gif
    :alt: Description of the animation
    :align: center
    

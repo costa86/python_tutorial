@@ -1,5 +1,5 @@
 ============================
-Functions
+Deconstructing
 ============================
 
 This is a process of extracting values from data structures such as lists, tuples, and dicts, and assigning them to isolated variables in a single statement. 

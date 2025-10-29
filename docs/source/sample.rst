@@ -84,7 +84,8 @@ S2
 ------------
 hhhhhhhhhhhhhhhhhhhh
 
-.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWV1MGdzOGc1MHIyZWt5eWRycXJma2ZiZDFxOWg5bnkzdWZqZXpmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUQ4rhUZJYiQsas6WD/giphy.gif
+.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTFpeDR1ZXFzendrcWY5MGJ0YzVyMzh2andxMWZzNDF0aXdmdm9iZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vJQLvFGuihLIiNo52r/giphy.gif
    :alt: Description of the animation
-   :width: 400px
    :align: center
+   
+---------------------------

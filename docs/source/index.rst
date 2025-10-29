@@ -51,7 +51,7 @@ Contents
    tuples
    dictionaries
    sets
-   boolean
+   boo
    operators
    conditionals
    deconstructing
@@ -71,3 +71,4 @@ Contents
    async
    context
    testing
+   bytes

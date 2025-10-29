@@ -91,10 +91,10 @@ Tuples vs Lists
 In case you are wondering when to use lists or tuples, since they are so similar, here's a few points for your consideration:
 
 - **Tuples** are a good choice when you want to ensure the elements are not accidentally modified. This is because tuples are immutable, meaning their elements cannot be changed once the tuple is created. 
-If you have data that should remain constant, then a tuple is the solution.
+  If you have data that should remain constant, then a tuple is the solution.
 
 - **Tuples** are optimized for performance in certain operations. They are faster for operations such as iterating over their elements or accessing them via index. 
-If you need to access or iterate over the elements of a collection but don't need to modify it, then a tuple can be more suitable compared to a list.
+  If you need to access or iterate over the elements of a collection but don't need to modify it, then a tuple can be more suitable compared to a list.
 
 - **Lists** provide more flexibility compared to tuples. They allow you to change, add, or delete elements in a collection. 
-If you anticipate needing to modify the elements of a collection or require more flexibility in general, then a list would be a good fit.
+  If you anticipate needing to modify the elements of a collection or require more flexibility in general, then a list would be a good fit.

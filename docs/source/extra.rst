@@ -702,15 +702,15 @@ I do believe this last chapter provides good insights on how Python programs are
 Now it’s time for a few closing words regarding this journey. For that, a few points that actually meant a lot to me throughout the writing of the book, 
 that also motivated me to start writing it in the first place:
 
-- **Practice, practice and more practice**. This may seem obvious, but sometimes even the obvious needs to be reinforced. 
-  It's only through practicing the concepts that you will learn and start solving real-world problems with code. 
-  That's what programming is all about, by the way!
+**Practice, practice and more practice**. This may seem obvious, but sometimes even the obvious needs to be reinforced. 
+It's only through practicing the concepts that you will learn and start solving real-world problems with code. 
+That's what programming is all about, by the way!
 
-- **Refactoring**. All the programming content you see online, in books (like this one), and in courses is curated! 
-  Someone took the time to make the code look that way... When we're developing a program, our minds wander, which is normal. 
-  As a result, the initial version of the program may not look "pretty." 
-  Refactoring means making the code more maintainable and readable for the future. 
-  The code you write today is likely to change, especially if you're working professionally. 
-  It's also likely that someone else will make those changes or that you'll need to modify someone else's code. 
-  That's why it's important to refactor your code whenever possible. Your coworkers and your future self will thank you! 
+**Refactoring**. All the programming content you see online, in books (like this one), and in courses is curated! 
+Someone took the time to make the code look that way... When we're developing a program, our minds wander, which is normal. 
+As a result, the initial version of the program may not look "pretty." 
+Refactoring means making the code more maintainable and readable for the future. 
+The code you write today is likely to change, especially if you're working professionally. 
+It's also likely that someone else will make those changes or that you'll need to modify someone else's code. 
+That's why it's important to refactor your code whenever possible. Your coworkers and your future self will thank you! 
 

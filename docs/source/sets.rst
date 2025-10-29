@@ -6,6 +6,12 @@ This is another data type used to store values as a collection in Python.
 Sets oﬀer a very interesting feature, though: uniqueness of elements. This means that if you add the same element twice (or more) to a set, 
 it will be ignored! This is useful if you want to ensure your collection does not contain any duplicated elements:
 
+.. image:: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2RmdGp3YjU4endsZzBiZjduMnhsaXNwNGR3dzdvdWFyOHB0b3c3MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/McgfJZSsoWqFsd3XS2/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
 
 .. code-block:: python
    :linenos:

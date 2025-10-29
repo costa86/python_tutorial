@@ -641,3 +641,70 @@ you have to download and install it first:  https://graphviz.org/. Here’s the 
    :scale: 100 %
    :alt: UML
 
+
+Working with datasets (Excel, CSV, JSON, SQL)
+----------------------------------------
+
+Handling CSV, Excel and other files is one of the most popular and practical usages of Python programming. 
+In fact, this is a skill that attracts many people to the language.
+
+This is a very rich and vast subject. Exploring even the basics would easily take many chapters in this book. 
+Despite that, let’s see how easy it is to open a CSV file in Python with different approaches. 
+
+Built-in: csv library
+-------------------------------
+
+
+.. code-block:: python
+   :linenos:
+
+    import csv
+
+    with open("my-file.csv", "r") as csv_file:
+        reader = csv.reader(csv_file)
+        
+        for i in reader:
+            print(i)
+
+
+That will ``print()`` each line in the ``my-file.csv`` file.
+
+Third-party options: Pandas and Polars
+------------------------------------------
+
+With some basic research, you will probably bump into the *pandas* third-party library to handle large datasets. 
+It’s a very popular and powerful choice. Find more about it at: https://pandas.pydata.org/. 
+
+An interesting alternative is *polars*: https://pola.rs. 
+This is a newer library designed for high-performance data processing and analysis, and it’s also easier to use. 
+I do recommend you give it a shot before jumping into *pandas*!
+
+.. code-block:: python
+   :linenos:
+
+    import polars
+
+    data = polars.read_csv("my-file.csv")
+    print(data)
+
+As you probably guessed, this will ``print()`` the contents of ``my-file.csv``.
+
+Wrapping up
+-------------------
+
+.. image:: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnljeTNhcTd0cmo2MW5tampleWhtNTRpd3k5N3ZrMTE3dHdlOGQ5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GA1s4aZhfe5f2N3fFb/giphy.gif
+   :alt: Description of the animation
+   :align: center
+   
+---------------------------
+
+I do believe this last chapter provides good insights on how Python programs are used in real scenarios, where more concerns are existent.
+Now it’s time for a few closing words regarding this journey. For that, a few points that actually meant a lot to me throughout the writing of the book, 
+that also motivated me to start writing it in the first place:
+
+- **Practice, practice and more practice**. This may seem obvious, but sometimes even the obvious needs to be reinforced. 
+  It's only through practicing the concepts that you will learn and start solving real-world problems with code. 
+  That's what programming is all about, by the way!
+- **Refactoring**. All the programming content you see online, in books (like this one), and in courses is curated! 
+  Someone took the time to make the code look that way. When we're developing a program, our minds wander, which is normal. As a result, the initial version of the program may not look "pretty." Refactoring means making the code more maintainable and readable for the future. The code you write today is likely to change, especially if you're working professionally. It's also likely that someone else will make those changes or that you'll need to modify someone else's code. That's why it's important to refactor your code whenever possible. Your coworkers and your future self will thank you! 
+
